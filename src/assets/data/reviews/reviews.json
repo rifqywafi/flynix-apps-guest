@@ -1,0 +1,48 @@
+[
+    {
+      "id": 1,
+      "name": "Dina Kartika",
+      "company": "Shopee",
+      "review": "Produk ini sangat membantu aktivitas harian saya. Kualitasnya bagus dan sesuai dengan deskripsi.",
+      "image": "/src/assets/data/reviews/images/woman1.png",
+      "date": "2025-04-01",
+      "star": 5
+    },
+    {
+      "id": 2,
+      "name": "Rafi Pratama",
+      "company": "Tokopedia",
+      "review": "Pengiriman cepat, barang dikemas rapi. Saya puas dengan pelayanannya!",
+      "image": "/src/assets/data/reviews/images/man1.png",
+      "date": "2025-04-05",
+      "star": 4
+    },
+    {
+      "id": 3,
+      "name": "Nadia Ayu",
+      "company": "Blibli",
+      "review": "Awalnya ragu, tapi ternyata kualitasnya di atas ekspektasi. Recommended banget!",
+      "image": "/src/assets/data/reviews/images/woman2.png",
+      "date": "2025-04-10",
+      "star": 5
+    },
+    {
+      "id": 4,
+      "name": "Yoga Firmansyah",
+      "company": "Bukalapak",
+      "review": "Harga terjangkau dan fungsinya sesuai. Sudah dua kali beli dan selalu puas.",
+      "image": "/src/assets/data/reviews/images/man2.png",
+      "date": "2025-04-15",
+      "star": 4
+    },
+    {
+      "id": 5,
+      "name": "Lina Marlina",
+      "company": "Lazada",
+      "review": "Desainnya elegan dan nyaman digunakan. Akan beli lagi untuk hadiah teman.",
+      "image": "/src/assets/data/reviews/images/woman1.png",
+      "date": "2025-04-20",
+      "star": 5
+    }
+  ]
+  

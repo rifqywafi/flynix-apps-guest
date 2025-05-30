@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "position": "Frontend Developer",
+      "location": "Remote / Jakarta",
+      "type": "Full-Time",
+      "description": "Bertanggung jawab untuk mengembangkan dan memelihara tampilan antarmuka website menggunakan React.js dan Tailwind CSS.",
+      "requirements": [
+        "Menguasai JavaScript & React.js",
+        "Berpengalaman dengan Git dan REST API",
+        "Memiliki portofolio proyek front-end"
+      ]
+    },
+    {
+      "id": 2,
+      "position": "UI/UX Designer",
+      "location": "Bandung",
+      "type": "Full-Time",
+      "description": "Merancang tampilan dan pengalaman pengguna yang intuitif dan menarik untuk platform web dan mobile.",
+      "requirements": [
+        "Mahir menggunakan Figma atau Adobe XD",
+        "Paham prinsip desain responsif",
+        "Berpikir kreatif dan detail-oriented"
+      ]
+    },
+    {
+      "id": 3,
+      "position": "Digital Marketing Specialist",
+      "location": "Remote",
+      "type": "Part-Time",
+      "description": "Mengelola strategi pemasaran digital, termasuk media sosial, email campaign, dan iklan berbayar.",
+      "requirements": [
+        "Pengalaman dengan Google Ads dan Meta Ads",
+        "Paham SEO dan SEM",
+        "Mampu membuat konten menarik"
+      ]
+    },
+    {
+      "id": 4,
+      "position": "Project Manager",
+      "location": "Surabaya / Hybrid",
+      "type": "Contract (6 bulan)",
+      "description": "Memimpin tim pengembangan proyek teknologi dengan manajemen waktu dan komunikasi yang baik.",
+      "requirements": [
+        "Berpengalaman memimpin tim teknis",
+        "Menguasai tools seperti Trello / Jira",
+        "Komunikatif dan mampu menyusun timeline"
+      ]
+    }
+  ]
+  

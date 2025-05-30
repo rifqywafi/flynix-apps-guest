@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --primary: #EB5A3C;
+  --secondary: #DF9755;
+  --ternary: #E7D283;
+  --sides: #EDF4C2;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.text-primary {
+  color: #138bd1;
+}
+.container-row {
+    gap: 20px;
+    padding: 10px;
+    margin: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+.container-column {
+    gap: 20px;
+    padding: 10px;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  height: 100%;
+  position: relative;
+}
+.thumbnail {
+  margin: 15px 0;
+  text-align: center;
+}
+.article-header {
+  text-align: center;
+}
+.content-text {
+  font-size: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ced4da;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  resize: none;
+  margin: 1rem 0 2rem 0;
+}
+
+.input-group label {
+  font-size: 16px;
+  color: #6c757d;
+  transition: 0.3s ease-in-out;
+  background: #f8f9fa;
+  padding: 0 5px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #0d6efd;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+  top: 5px;
+  left: 10px;
+  font-size: 12px;
+  color: #0d6efd;
+}
+
+input,
+textarea::placeholder {
+  opacity: 50%;
+}
+
+.header {
+  border-bottom: 6px var(--primary) solid;
+  margin-bottom: 2rem;
+  padding-bottom: 1em;
+}
+.header h1 {
+  margin: 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+  font-weight: 500;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+.button-container-end {
+  justify-self: end;
+  /* display: flex;
+    justify-content: flex-end; Meletakkan button di kanan */
+  padding: 10px;
+}
+.btn-primary {
+  background-color: #0d6efd;
+}
+.btn-secondary {
+  background-color: #6c757d;
+}
+.btn-success {
+  background-color: #198754;
+}
+.btn-danger {
+  background-color: #dc3545;
+}
+.btn-warning {
+  background-color: #ffc107;
+  color: black;
+}
+.btn-info {
+  background-color: #0dcaf0;
+}
+.btn-light {
+  background-color: #f8f9fa;
+  color: black;
+  border: 1px solid #ced4da;
+}
+.btn-dark {
+  background-color: #212529;
+}
+
+.article-title{
+  width: 100%;
+  padding-bottom: 1em;
+  border-bottom: 6px var(--primary) solid;
+}
+.article-title h1 {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 50px;
+}
+.article-subtitle{
+  width: 100%;
+  padding: 1rem 0;
+}
+.article-detail{
+  padding: 25px;
+  width: 75vw;
+  font-size: 22px;
+  background-color: white;
+  border-radius: 1rem;
+  height: 100%;
+}
+/* .card{
+  margin: 10px 0;
+  padding: 20px;
+  min-width: 100%;
+  background-color: white;
+  border-radius: 10px;
+} */
+.vw-25{
+  width: 25vw;
+}
+
+.bg-primary{
+  background-color: var(--primary);
+}
+.bg-secondary{
+  background-color: var(--secondary);
+}
+.bg-ternary{
+  background-color: var(--ternary);
+}
+.bg-sides{
+  background-color: var(--sides);
+}
+.article-card-title{
+  width: 100%;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+  border-bottom: 6px var(--primary) solid;
+}
+
+.article-card-list {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+}
+.article-card-list:hover {
+  cursor: pointer;
+  background-color: var(--sides);
+  transition-delay: 0.1s;
+}
+.article-card-thumbnail {
+  border-right: 5px var(--secondary) solid;
+  padding-right: 2rem;
+}
+.article-card-desc {
+  padding-left: 2rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+.article-card-rank {
+  height: 25%;
+  font-size: 24px;
+  padding: 25px;
+  background-color: var(--secondary);
+  margin-right: 1rem;
+  color: white;
+}
+
+.faq-section {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.faq-question{
+  border-left: 10px var(--secondary) solid;
+  background-color: rgb(243, 243, 243);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.faq-answer{
+  align-self: center;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.vh-30{
+  height: 30vh;
+}
