@@ -3,8 +3,27 @@ import { BiChevronUp } from "react-icons/bi";
 // import Card from "../components/Card";
 import { useState } from "react";
 import testimonies from "../assets/data/testimonies/testimonies.json";
+import { useEffect } from "react";
+import axios from "axios";
 
 export default function LandingPage() {
+  // const data = {
+  //   i: "",
+  //   q: "TESS",
+  //   a: "Rifqy"
+  // }
+  const [data, setData] = useState("")
+  useEffect(() => {
+      axios
+          .get(`https://api.adviceslip.com/advice`)
+          .then((response) => {
+              setData(response.data.slip)
+          })
+          .catch((err) => {
+              
+          })
+    }, []) 
+
   return (
     <div id="landing-page" className="overflow-hidden">
       <img
@@ -16,10 +35,21 @@ export default function LandingPage() {
       <PlaneIconBg marginT={500} marginE={300} />
       <PlaneIconBg marginT={200} marginE={600} />
       <HeroSection />
+      <QuoteSection data={data} />
       <ServiceSection />
       <TestimonySection />
     </div>
   );
+}
+
+function QuoteSection({data}){
+  return(
+      <div className="flex flex-col mb-50 justify-center items-center">
+        <div className="md:text-4xl xl:text-6xl italic">
+            "{data.advice}"
+        </div>
+      </div>
+  )
 }
 
 function PlaneIconBg({ marginT, marginE }) {
@@ -37,7 +67,7 @@ function HeroSection() {
   return (
     <div
       id="hero-section"
-      className="mt-5 xl:mt-none xl:justify-start justify-center flex flex-row items-center mx-35 bottom-15 min-h-screen relative max-w-screen-xl"
+      className="mt-5 xl:mt-none xl:justify-start justify-center flex flex-row items-center mx-35 min-h-screen relative max-w-screen-xl"
     >
       {/* Hero Content di Kiri */}
       <div id="hero-content" className="xl:w-1/2 z-10 text-center md:text-left">
@@ -165,7 +195,7 @@ function TestimonySection() {
     setActiveIndex(index);
   };
   return (
-    <div id="testimony-section" className="mt-75 xl:mt-0 min-h-[50vh] flex flex-col gap-15 xl:gap-5 xl:flex-row mx-35">
+    <div id="testimony-section" className="xl:mt-0 min-h-[50vh] flex flex-col gap-15 xl:gap-5 xl:flex-row mx-35">
       <div id="testimony-text" className="w-1/2 text-left">
         <div
           id="testimony-tag"
