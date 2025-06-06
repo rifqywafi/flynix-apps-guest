@@ -1,5 +1,5 @@
-import { BiChevronDown } from "react-icons/bi"; 
-import { BiChevronUp } from "react-icons/bi"; 
+import { BiChevronDown } from "react-icons/bi";
+import { BiChevronUp } from "react-icons/bi";
 // import Card from "../components/Card";
 import { useState } from "react";
 import testimonies from "../assets/data/testimonies/testimonies.json";
@@ -12,17 +12,12 @@ export default function LandingPage() {
   //   q: "TESS",
   //   a: "Rifqy"
   // }
-  const [data, setData] = useState("")
+  const [data, setData] = useState("");
   useEffect(() => {
-      axios
-          .get(`https://api.adviceslip.com/advice`)
-          .then((response) => {
-              setData(response.data.slip)
-          })
-          .catch((err) => {
-              
-          })
-    }, []) 
+    axios.get(`https://api.quotable.io/random`).then((response) => {
+      setData(response.data);
+    });
+  }, []);
 
   return (
     <div id="landing-page" className="overflow-hidden">
@@ -42,14 +37,15 @@ export default function LandingPage() {
   );
 }
 
-function QuoteSection({data}){
-  return(
-      <div className="flex flex-col mb-50 justify-center items-center">
-        <div className="md:text-4xl xl:text-6xl italic">
-            "{data.advice}"
-        </div>
+function QuoteSection({ data }) {
+  return (
+    <div className="flex flex-col text-center gap-5 mb-50 xl:mx-35 justify-center items-center">
+      <div className="md:text-2xl xl:text-4xl italic ">"{data.content}"</div>
+      <div className="self-end">
+        <div className="md:text-xl xl:text-2xl">— {data.author}</div>
       </div>
-  )
+    </div>
+  );
 }
 
 function PlaneIconBg({ marginT, marginE }) {
@@ -105,7 +101,7 @@ function HeroSection() {
 
 function ServiceSection() {
   return (
-    <div id="service-section" className="min-h-screen">
+    <div id="service-section" className="my-50">
       <img
         src="images/service-decor1.png"
         className="absolute right-10 z-[-20]"
@@ -195,12 +191,12 @@ function TestimonySection() {
     setActiveIndex(index);
   };
   return (
-    <div id="testimony-section" className="xl:mt-0 min-h-[50vh] flex flex-col gap-15 xl:gap-5 xl:flex-row mx-35">
+    <div
+      id="testimony-section"
+      className="my-50 flex flex-col gap-15 xl:gap-5 xl:flex-row mx-35"
+    >
       <div id="testimony-text" className="w-1/2 text-left">
-        <div
-          id="testimony-tag"
-          className="text-gray-500 text-xl mb-3"
-        >
+        <div id="testimony-tag" className="text-gray-500 text-xl mb-3">
           Testimoni
         </div>
         <div
@@ -225,18 +221,21 @@ function TestimonySection() {
         <div id="testimony-content" className="relative">
           <TestimonyCard {...testimonies[activeIndex]} />
         </div>
-        <div id="testimonies-navigation" className="flex-col flex items-center gap-20 justify-center w-20">
+        <div
+          id="testimonies-navigation"
+          className="flex-col flex items-center gap-20 justify-center w-20"
+        >
           <button
-              onClick={prevTestimony}
-              className="text-gray-400 hover:text-secondary text-4xl hover:cursor-pointer"
-            >
-              <BiChevronUp />
+            onClick={prevTestimony}
+            className="text-gray-400 hover:text-secondary text-4xl hover:cursor-pointer"
+          >
+            <BiChevronUp />
           </button>
           <button
-              onClick={nextTestimony}
-              className="text-gray-400 hover:text-secondary text-4xl hover:cursor-pointer"
-            >
-              <BiChevronDown />
+            onClick={nextTestimony}
+            className="text-gray-400 hover:text-secondary text-4xl hover:cursor-pointer"
+          >
+            <BiChevronDown />
           </button>
         </div>
       </div>
@@ -248,7 +247,11 @@ function TestimonyCard({ content, name, img, address }) {
   return (
     <div className="bg-white rounded-2xl shadow-xl p-6">
       <div id="testimony-card-content" className="text-gray-500 relative ">
-        <img src={img} className="object-cover absolute top-[-70px] left-[-70px] rounded-full border-2 w-[75px] h-[75px] z-20" alt="" />
+        <img
+          src={img}
+          className="object-cover absolute top-[-70px] left-[-70px] rounded-full border-2 w-[75px] h-[75px] z-20"
+          alt=""
+        />
         <div id="testimony-card-content" className="mb-4">
           {content}
         </div>

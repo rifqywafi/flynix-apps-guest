@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Panduan Lengkap Belajar React untuk Pemula",
+    "author": "Dewi Lestari",
+    "date": "2025-05-15",
+    "content": "React adalah library JavaScript yang digunakan untuk membangun antarmuka pengguna (UI). Dalam artikel ini, kita akan mempelajari dasar-dasar React seperti komponen, props, dan state.",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+  },
+  {
+    "id": 2,
+    "title": "Memahami State dan Props di React",
+    "author": "Andi Saputra",
+    "date": "2025-05-20",
+    "content": "State dan props adalah bagian penting dalam pengembangan aplikasi React. State digunakan untuk menyimpan data lokal komponen, sedangkan props digunakan untuk mengirim data antar komponen.",
+    "imageUrl": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f"
+  },
+  {
+    "id": 3,
+    "title": "Membuat Komponen Reusable dengan React",
+    "author": "Sari Wulandari",
+    "date": "2025-05-25",
+    "content": "Komponen reusable memungkinkan kita menulis kode yang lebih bersih dan efisien. Pelajari bagaimana menyusun komponen agar bisa digunakan berulang kali di berbagai bagian aplikasi.",
+    "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+  },
+  {
+    "id": 4,
+    "title": "Hooks di React: useState dan useEffect",
+    "author": "Rizky Anwar",
+    "date": "2025-06-01",
+    "content": "Hooks adalah fitur terbaru di React yang memungkinkan penggunaan state dan lifecycle tanpa class. Dua hook yang paling umum digunakan adalah useState dan useEffect.",
+    "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+  }
+]

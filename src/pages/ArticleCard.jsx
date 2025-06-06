@@ -19,7 +19,7 @@ function ArticleTitle(props){
     return(
         <div className="article-subtitle">
             <h3>
-                {props.content}
+                {props.content}\
             </h3>
         </div>
     )

@@ -3,6 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 import careers from "../assets/data/careers/careers.json";
 import Header from "../components/Header";
 import { ContainerCol } from "../components/Container";
+import { Link } from "react-router-dom";
 
 export default function Career() {
   return (
@@ -46,7 +47,9 @@ export default function Career() {
       >
         <div className="grid lg:grid-cols-2 gap-10">
           {careers.map((c) => (
-            <CareerCard position={c.position} />
+            <Link to={`/career/${c.id}`}>
+              <CareerCard position={c.position} />
+            </Link>
           ))}
         </div>
         <div className="mx-auto">
@@ -63,12 +66,13 @@ function CareerCard({ position }) {
       <div id="career-position">{position}</div>
       <div id="career-cta">
         <div className="rounded-full bg-white p-3">
-          <AiOutlineArrowRight />
+          <AiOutlineArrowRight className="text-black" />
         </div>
       </div>
     </div>
   );
 }
+
 function WhyCard({ img, title, desc }) {
   return (
     <div className="p-3 flex flex-col justify-center items-center w-[25vw]">

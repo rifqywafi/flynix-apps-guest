@@ -23,6 +23,10 @@ const OurTeam = React.lazy(() => import("./pages/OurTeam"));
 const UserReview = React.lazy(() => import("./pages/UserReview"));
 const Career = React.lazy(() => import("./pages/Career"));
 const Booking = React.lazy(() => import("./pages/Booking"));
+const Articles = React.lazy(() => import("./pages/Articles"));
+const BookingDetail = React.lazy(() => import("./pages/BookingDetail"))
+const CareerDetail = React.lazy(() => import("./pages/CareerDetail"))
+const OurTeamDetail = React.lazy(() => import("./pages/OurTeamDetail"))
 const AboutUs = React.lazy(() => import("./pages/AboutUs"));
 const ErrorPage = React.lazy(() => import("./pages/ErrorPage"));
 const MainLayout = React.lazy(() => import("./layouts/MainLayout"));
@@ -37,9 +41,14 @@ function App() {
             <Route path="/article/detail" element={<ArticleDetail />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/our-team" element={<OurTeam />} />
+            <Route path="/our-team/:id" element={<OurTeamDetail />} />
             <Route path="/user-review" element={<UserReview />} />
             <Route path="/career" element={<Career />} />
+            <Route path="/career/:id" element={<CareerDetail />} />
             <Route path="/booking" element={<Booking />} />
+            <Route path="/booking/:id" element={<BookingDetail />} />
+            <Route path="/article" element={<Articles />} />
+            <Route path="/article/:id" element={<ArticleDetail />} />
             <Route path="/about-us" element={<AboutUs />} />
           </Route>
           <Route element={<ErrorLayout />}>

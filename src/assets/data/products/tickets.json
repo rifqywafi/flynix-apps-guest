@@ -1,142 +1,502 @@
 [
   {
+    "id": "1",
     "aircraftType": "Boeing 737-800",
     "origin": "DKI Jakarta",
     "destination": "Bali",
-    "route": "DKI Jakarta → Bali",
+    "route": "DKI Jakarta \u2192 Bali",
     "departureDate": "2025-06-15",
     "flightType": "Domestik",
     "currency": "IDR",
     "classes": [
-      { "classType": "Economy", "baseFare": 1200000, "taxesAndFees": 250000, "totalFare": 1450000 },
-      { "classType": "Business", "baseFare": 3500000, "taxesAndFees": 300000, "totalFare": 3800000 },
-      { "classType": "First Class", "baseFare": 7000000, "taxesAndFees": 400000, "totalFare": 7400000 }
-    ]
+      {
+        "classType": "Economy",
+        "baseFare": 1200000,
+        "taxesAndFees": 250000,
+        "totalFare": 1450000,
+        "terminal": "T2A",
+        "wifiAvailable": true,
+        "gate": "A2",
+        "maxBaggage": 18,
+        "refundable": true,
+        "seatAvailable": 32
+      },
+      {
+        "classType": "Business",
+        "baseFare": 3500000,
+        "taxesAndFees": 300000,
+        "totalFare": 3800000,
+        "terminal": "T1B",
+        "wifiAvailable": false,
+        "gate": "B7",
+        "maxBaggage": 17,
+        "refundable": false,
+        "seatAvailable": 31
+      },
+      {
+        "classType": "First Class",
+        "baseFare": 7000000,
+        "taxesAndFees": 400000,
+        "totalFare": 7400000,
+        "terminal": "T3C",
+        "wifiAvailable": false,
+        "gate": "C6",
+        "maxBaggage": 21,
+        "refundable": true,
+        "seatAvailable": 20
+      }
+    ],
+    "boardingTime": "05:15",
+    "arrivalTime": "07:58"
   },
   {
+    "id": "2",
     "aircraftType": "Airbus A320",
     "origin": "Jawa Timur",
     "destination": "Sulawesi Selatan",
-    "route": "Jawa Timur → Sulawesi Selatan",
+    "route": "Jawa Timur \u2192 Sulawesi Selatan",
     "departureDate": "2025-06-18",
     "flightType": "Domestik",
     "currency": "IDR",
     "classes": [
-      { "classType": "Economy", "baseFare": 950000, "taxesAndFees": 200000, "totalFare": 1150000 },
-      { "classType": "Business", "baseFare": 2800000, "taxesAndFees": 250000, "totalFare": 3050000 },
-      { "classType": "First Class", "baseFare": 6200000, "taxesAndFees": 400000, "totalFare": 6600000 }
-    ]
+      {
+        "classType": "Economy",
+        "baseFare": 950000,
+        "taxesAndFees": 200000,
+        "totalFare": 1150000,
+        "terminal": "T3A",
+        "wifiAvailable": false,
+        "gate": "A7",
+        "maxBaggage": 32,
+        "refundable": true,
+        "seatAvailable": 86
+      },
+      {
+        "classType": "Business",
+        "baseFare": 2800000,
+        "taxesAndFees": 250000,
+        "totalFare": 3050000,
+        "terminal": "T3B",
+        "wifiAvailable": true,
+        "gate": "B3",
+        "maxBaggage": 31,
+        "refundable": false,
+        "seatAvailable": 86
+      },
+      {
+        "classType": "First Class",
+        "baseFare": 6200000,
+        "taxesAndFees": 400000,
+        "totalFare": 6600000,
+        "terminal": "T2C",
+        "wifiAvailable": false,
+        "gate": "C4",
+        "maxBaggage": 33,
+        "refundable": true,
+        "seatAvailable": 79
+      }
+    ],
+    "boardingTime": "11:15",
+    "arrivalTime": "12:55"
   },
   {
-    "aircraftType": "ATR 72-600",
-    "origin": "Jawa Barat",
-    "destination": "DI Yogyakarta",
-    "route": "Jawa Barat → DI Yogyakarta",
-    "departureDate": "2025-07-01",
-    "flightType": "Domestik",
-    "currency": "IDR",
-    "classes": [
-      { "classType": "Economy", "baseFare": 700000, "taxesAndFees": 150000, "totalFare": 850000 },
-      { "classType": "Business", "baseFare": 2100000, "taxesAndFees": 200000, "totalFare": 2300000 },
-      { "classType": "First Class", "baseFare": 5000000, "taxesAndFees": 300000, "totalFare": 5300000 }
-    ]
-  },
-  {
-    "aircraftType": "Airbus A330",
-    "origin": "Sumatera Utara",
-    "destination": "DKI Jakarta",
-    "route": "Sumatera Utara → DKI Jakarta",
-    "departureDate": "2025-07-03",
-    "flightType": "Domestik",
-    "currency": "IDR",
-    "classes": [
-      { "classType": "Economy", "baseFare": 1100000, "taxesAndFees": 230000, "totalFare": 1330000 },
-      { "classType": "Business", "baseFare": 3200000, "taxesAndFees": 300000, "totalFare": 3500000 },
-      { "classType": "First Class", "baseFare": 6500000, "taxesAndFees": 400000, "totalFare": 6900000 }
-    ]
-  },
-  {
-    "aircraftType": "Boeing 737 MAX",
-    "origin": "Kalimantan Timur",
-    "destination": "Sulawesi Utara",
-    "route": "Kalimantan Timur → Sulawesi Utara",
-    "departureDate": "2025-07-05",
-    "flightType": "Domestik",
-    "currency": "IDR",
-    "classes": [
-      { "classType": "Economy", "baseFare": 800000, "taxesAndFees": 200000, "totalFare": 1000000 },
-      { "classType": "Business", "baseFare": 2300000, "taxesAndFees": 250000, "totalFare": 2550000 },
-      { "classType": "First Class", "baseFare": 5500000, "taxesAndFees": 350000, "totalFare": 5850000 }
-    ]
-  },
-  {
-    "aircraftType": "Airbus A321neo",
-    "origin": "DKI Jakarta",
-    "destination": "Nusa Tenggara Barat",
-    "route": "DKI Jakarta → Nusa Tenggara Barat",
-    "departureDate": "2025-06-30",
-    "flightType": "Domestik",
-    "currency": "IDR",
-    "classes": [
-      { "classType": "Economy", "baseFare": 1000000, "taxesAndFees": 220000, "totalFare": 1220000 },
-      { "classType": "Business", "baseFare": 2700000, "taxesAndFees": 280000, "totalFare": 2980000 },
-      { "classType": "First Class", "baseFare": 6000000, "taxesAndFees": 380000, "totalFare": 6380000 }
-    ]
-  },
-  {
-    "aircraftType": "Boeing 737-900ER",
-    "origin": "Sumatera Selatan",
-    "destination": "Kepulauan Riau",
-    "route": "Sumatera Selatan → Kepulauan Riau",
-    "departureDate": "2025-07-12",
-    "flightType": "Domestik",
-    "currency": "IDR",
-    "classes": [
-      { "classType": "Economy", "baseFare": 850000, "taxesAndFees": 180000, "totalFare": 1030000 },
-      { "classType": "Business", "baseFare": 2400000, "taxesAndFees": 220000, "totalFare": 2620000 },
-      { "classType": "First Class", "baseFare": 5000000, "taxesAndFees": 350000, "totalFare": 5350000 }
-    ]
-  },
-  {
+    "id": "3",
     "aircraftType": "Boeing 737-800",
-    "origin": "Papua",
-    "destination": "Maluku",
-    "route": "Papua → Maluku",
-    "departureDate": "2025-07-08",
+    "origin": "DKI Jakarta",
+    "destination": "Bali",
+    "route": "DKI Jakarta \u2192 Bali",
+    "departureDate": "2025-06-15",
     "flightType": "Domestik",
     "currency": "IDR",
     "classes": [
-      { "classType": "Economy", "baseFare": 1800000, "taxesAndFees": 270000, "totalFare": 2070000 },
-      { "classType": "Business", "baseFare": 4200000, "taxesAndFees": 320000, "totalFare": 4520000 },
-      { "classType": "First Class", "baseFare": 7500000, "taxesAndFees": 500000, "totalFare": 8000000 }
-    ]
+      {
+        "classType": "Economy",
+        "baseFare": 1200000,
+        "taxesAndFees": 250000,
+        "totalFare": 1450000,
+        "terminal": "T3A",
+        "wifiAvailable": true,
+        "gate": "A1",
+        "maxBaggage": 15,
+        "refundable": true,
+        "seatAvailable": 35
+      },
+      {
+        "classType": "Business",
+        "baseFare": 3500000,
+        "taxesAndFees": 300000,
+        "totalFare": 3800000,
+        "terminal": "T1B",
+        "wifiAvailable": true,
+        "gate": "B8",
+        "maxBaggage": 17,
+        "refundable": false,
+        "seatAvailable": 25
+      },
+      {
+        "classType": "First Class",
+        "baseFare": 7000000,
+        "taxesAndFees": 400000,
+        "totalFare": 7400000,
+        "terminal": "T3C",
+        "wifiAvailable": false,
+        "gate": "C5",
+        "maxBaggage": 17,
+        "refundable": true,
+        "seatAvailable": 22
+      }
+    ],
+    "boardingTime": "05:15",
+    "arrivalTime": "07:58"
   },
   {
+    "id": "4",
     "aircraftType": "Airbus A320",
-    "origin": "Banten",
-    "destination": "Kalimantan Barat",
-    "route": "Banten → Kalimantan Barat",
-    "departureDate": "2025-07-15",
+    "origin": "Jawa Timur",
+    "destination": "Sulawesi Selatan",
+    "route": "Jawa Timur \u2192 Sulawesi Selatan",
+    "departureDate": "2025-06-18",
     "flightType": "Domestik",
     "currency": "IDR",
     "classes": [
-      { "classType": "Economy", "baseFare": 950000, "taxesAndFees": 200000, "totalFare": 1150000 },
-      { "classType": "Business", "baseFare": 2900000, "taxesAndFees": 270000, "totalFare": 3170000 },
-      { "classType": "First Class", "baseFare": 5800000, "taxesAndFees": 400000, "totalFare": 6200000 }
-    ]
+      {
+        "classType": "Economy",
+        "baseFare": 950000,
+        "taxesAndFees": 200000,
+        "totalFare": 1150000,
+        "terminal": "T2A",
+        "wifiAvailable": false,
+        "gate": "A1",
+        "maxBaggage": 33,
+        "refundable": true,
+        "seatAvailable": 90
+      },
+      {
+        "classType": "Business",
+        "baseFare": 2800000,
+        "taxesAndFees": 250000,
+        "totalFare": 3050000,
+        "terminal": "T3B",
+        "wifiAvailable": false,
+        "gate": "B5",
+        "maxBaggage": 34,
+        "refundable": false,
+        "seatAvailable": 84
+      },
+      {
+        "classType": "First Class",
+        "baseFare": 6200000,
+        "taxesAndFees": 400000,
+        "totalFare": 6600000,
+        "terminal": "T3C",
+        "wifiAvailable": false,
+        "gate": "C8",
+        "maxBaggage": 31,
+        "refundable": true,
+        "seatAvailable": 82
+      }
+    ],
+    "boardingTime": "11:15",
+    "arrivalTime": "12:55"
   },
   {
-    "aircraftType": "Boeing 737 MAX",
-    "origin": "Aceh",
-    "destination": "Sumatera Barat",
-    "route": "Aceh → Sumatera Barat",
-    "departureDate": "2025-07-18",
+    "id": "5",
+    "aircraftType": "Boeing 737-800",
+    "origin": "DKI Jakarta",
+    "destination": "Bali",
+    "route": "DKI Jakarta \u2192 Bali",
+    "departureDate": "2025-06-15",
     "flightType": "Domestik",
     "currency": "IDR",
     "classes": [
-      { "classType": "Economy", "baseFare": 900000, "taxesAndFees": 200000, "totalFare": 1100000 },
-      { "classType": "Business", "baseFare": 2500000, "taxesAndFees": 250000, "totalFare": 2750000 },
-      { "classType": "First Class", "baseFare": 5400000, "taxesAndFees": 350000, "totalFare": 5750000 }
-    ]
+      {
+        "classType": "Economy",
+        "baseFare": 1200000,
+        "taxesAndFees": 250000,
+        "totalFare": 1450000,
+        "terminal": "T2A",
+        "wifiAvailable": true,
+        "gate": "A4",
+        "maxBaggage": 15,
+        "refundable": true,
+        "seatAvailable": 33
+      },
+      {
+        "classType": "Business",
+        "baseFare": 3500000,
+        "taxesAndFees": 300000,
+        "totalFare": 3800000,
+        "terminal": "T3B",
+        "wifiAvailable": true,
+        "gate": "B7",
+        "maxBaggage": 18,
+        "refundable": false,
+        "seatAvailable": 25
+      },
+      {
+        "classType": "First Class",
+        "baseFare": 7000000,
+        "taxesAndFees": 400000,
+        "totalFare": 7400000,
+        "terminal": "T1C",
+        "wifiAvailable": true,
+        "gate": "C4",
+        "maxBaggage": 18,
+        "refundable": true,
+        "seatAvailable": 24
+      }
+    ],
+    "boardingTime": "05:15",
+    "arrivalTime": "07:58"
+  },
+  {
+    "id": "6",
+    "aircraftType": "Airbus A320",
+    "origin": "Jawa Timur",
+    "destination": "Sulawesi Selatan",
+    "route": "Jawa Timur \u2192 Sulawesi Selatan",
+    "departureDate": "2025-06-18",
+    "flightType": "Domestik",
+    "currency": "IDR",
+    "classes": [
+      {
+        "classType": "Economy",
+        "baseFare": 950000,
+        "taxesAndFees": 200000,
+        "totalFare": 1150000,
+        "terminal": "T3A",
+        "wifiAvailable": false,
+        "gate": "A1",
+        "maxBaggage": 27,
+        "refundable": true,
+        "seatAvailable": 89
+      },
+      {
+        "classType": "Business",
+        "baseFare": 2800000,
+        "taxesAndFees": 250000,
+        "totalFare": 3050000,
+        "terminal": "T2B",
+        "wifiAvailable": true,
+        "gate": "B6",
+        "maxBaggage": 31,
+        "refundable": false,
+        "seatAvailable": 84
+      },
+      {
+        "classType": "First Class",
+        "baseFare": 6200000,
+        "taxesAndFees": 400000,
+        "totalFare": 6600000,
+        "terminal": "T1C",
+        "wifiAvailable": false,
+        "gate": "C3",
+        "maxBaggage": 32,
+        "refundable": true,
+        "seatAvailable": 79
+      }
+    ],
+    "boardingTime": "11:15",
+    "arrivalTime": "12:55"
+  },
+  {
+    "id": "7",
+    "aircraftType": "Boeing 737-800",
+    "origin": "DKI Jakarta",
+    "destination": "Bali",
+    "route": "DKI Jakarta \u2192 Bali",
+    "departureDate": "2025-06-15",
+    "flightType": "Domestik",
+    "currency": "IDR",
+    "classes": [
+      {
+        "classType": "Economy",
+        "baseFare": 1200000,
+        "taxesAndFees": 250000,
+        "totalFare": 1450000,
+        "terminal": "T3A",
+        "wifiAvailable": true,
+        "gate": "A6",
+        "maxBaggage": 13,
+        "refundable": true,
+        "seatAvailable": 33
+      },
+      {
+        "classType": "Business",
+        "baseFare": 3500000,
+        "taxesAndFees": 300000,
+        "totalFare": 3800000,
+        "terminal": "T1B",
+        "wifiAvailable": false,
+        "gate": "B7",
+        "maxBaggage": 18,
+        "refundable": false,
+        "seatAvailable": 27
+      },
+      {
+        "classType": "First Class",
+        "baseFare": 7000000,
+        "taxesAndFees": 400000,
+        "totalFare": 7400000,
+        "terminal": "T1C",
+        "wifiAvailable": true,
+        "gate": "C1",
+        "maxBaggage": 18,
+        "refundable": true,
+        "seatAvailable": 26
+      }
+    ],
+    "boardingTime": "05:15",
+    "arrivalTime": "07:58"
+  },
+  {
+    "id": "8",
+    "aircraftType": "Airbus A320",
+    "origin": "Jawa Timur",
+    "destination": "Sulawesi Selatan",
+    "route": "Jawa Timur \u2192 Sulawesi Selatan",
+    "departureDate": "2025-06-18",
+    "flightType": "Domestik",
+    "currency": "IDR",
+    "classes": [
+      {
+        "classType": "Economy",
+        "baseFare": 950000,
+        "taxesAndFees": 200000,
+        "totalFare": 1150000,
+        "terminal": "T3A",
+        "wifiAvailable": false,
+        "gate": "A7",
+        "maxBaggage": 28,
+        "refundable": true,
+        "seatAvailable": 90
+      },
+      {
+        "classType": "Business",
+        "baseFare": 2800000,
+        "taxesAndFees": 250000,
+        "totalFare": 3050000,
+        "terminal": "T1B",
+        "wifiAvailable": false,
+        "gate": "B8",
+        "maxBaggage": 34,
+        "refundable": false,
+        "seatAvailable": 87
+      },
+      {
+        "classType": "First Class",
+        "baseFare": 6200000,
+        "taxesAndFees": 400000,
+        "totalFare": 6600000,
+        "terminal": "T1C",
+        "wifiAvailable": false,
+        "gate": "C6",
+        "maxBaggage": 37,
+        "refundable": true,
+        "seatAvailable": 78
+      }
+    ],
+    "boardingTime": "11:15",
+    "arrivalTime": "12:55"
+  },
+  {
+    "id": "9",
+    "aircraftType": "Boeing 737-800",
+    "origin": "DKI Jakarta",
+    "destination": "Bali",
+    "route": "DKI Jakarta \u2192 Bali",
+    "departureDate": "2025-06-15",
+    "flightType": "Domestik",
+    "currency": "IDR",
+    "classes": [
+      {
+        "classType": "Economy",
+        "baseFare": 1200000,
+        "taxesAndFees": 250000,
+        "totalFare": 1450000,
+        "terminal": "T2A",
+        "wifiAvailable": true,
+        "gate": "A6",
+        "maxBaggage": 16,
+        "refundable": true,
+        "seatAvailable": 31
+      },
+      {
+        "classType": "Business",
+        "baseFare": 3500000,
+        "taxesAndFees": 300000,
+        "totalFare": 3800000,
+        "terminal": "T3B",
+        "wifiAvailable": false,
+        "gate": "B9",
+        "maxBaggage": 14,
+        "refundable": false,
+        "seatAvailable": 27
+      },
+      {
+        "classType": "First Class",
+        "baseFare": 7000000,
+        "taxesAndFees": 400000,
+        "totalFare": 7400000,
+        "terminal": "T1C",
+        "wifiAvailable": true,
+        "gate": "C4",
+        "maxBaggage": 17,
+        "refundable": true,
+        "seatAvailable": 22
+      }
+    ],
+    "boardingTime": "05:15",
+    "arrivalTime": "07:58"
+  },
+  {
+    "id": "10",
+    "aircraftType": "Airbus A320",
+    "origin": "Jawa Timur",
+    "destination": "Sulawesi Selatan",
+    "route": "Jawa Timur \u2192 Sulawesi Selatan",
+    "departureDate": "2025-06-18",
+    "flightType": "Domestik",
+    "currency": "IDR",
+    "classes": [
+      {
+        "classType": "Economy",
+        "baseFare": 950000,
+        "taxesAndFees": 200000,
+        "totalFare": 1150000,
+        "terminal": "T3A",
+        "wifiAvailable": true,
+        "gate": "A4",
+        "maxBaggage": 27,
+        "refundable": true,
+        "seatAvailable": 88
+      },
+      {
+        "classType": "Business",
+        "baseFare": 2800000,
+        "taxesAndFees": 250000,
+        "totalFare": 3050000,
+        "terminal": "T3B",
+        "wifiAvailable": false,
+        "gate": "B2",
+        "maxBaggage": 33,
+        "refundable": false,
+        "seatAvailable": 82
+      },
+      {
+        "classType": "First Class",
+        "baseFare": 6200000,
+        "taxesAndFees": 400000,
+        "totalFare": 6600000,
+        "terminal": "T2C",
+        "wifiAvailable": true,
+        "gate": "C5",
+        "maxBaggage": 35,
+        "refundable": true,
+        "seatAvailable": 81
+      }
+    ],
+    "boardingTime": "11:15",
+    "arrivalTime": "12:55"
   }
 ]
