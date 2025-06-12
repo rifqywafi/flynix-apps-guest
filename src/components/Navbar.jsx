@@ -2,26 +2,21 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [dropdown, setDropdown] = useState(""); // "" | "tentang" | "informasi"
   const [scrolled, setScrolled] = useState(false);
 
   const menuClass = ({ isActive }) =>
     `cursor-pointer ${isActive ? "text-secondary" : "hover:text-secondary"}`;
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const toggleDropdown = (type) => {
+    setDropdown(dropdown === type ? "" : type);
   };
 
- useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(scrollTop > 10);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -43,38 +38,73 @@ export default function Navbar() {
         <div id="nav-menu" className="hidden md:flex gap-8 text-sm text-gray-700 items-center relative">
           <NavLink to="/booking" className={menuClass}>Pesan Tiket</NavLink>
           <NavLink to="/user-review" className={menuClass}>Reviews</NavLink>
+          
+          {/* Dropdown Tentang */}
           <div className="relative">
             <button
-              onClick={toggleDropdown}
+              onClick={() => toggleDropdown("tentang")}
               className="hover:text-secondary hover:cursor-pointer focus:outline-none text-sm"
             >
               Tentang
             </button>
-            {isDropdownOpen && (
+            {dropdown === "tentang" && (
               <div className="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-lg z-50">
                 <NavLink
                   to="/about-us"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary hover:rounded-t-md text-sm"
-                  onClick={() => setIsDropdownOpen(false)}
+                  onClick={() => setDropdown("")}
                 >
                   Tentang Kami
                 </NavLink>
                 <NavLink
                   to="/our-team"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary hover:rounded-b-md text-sm"
-                  onClick={() => setIsDropdownOpen(false)}
+                  onClick={() => setDropdown("")}
                 >
                   Tim Kami
                 </NavLink>
               </div>
             )}
           </div>
+
+          {/* Dropdown Informasi */}
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdown("informasi")}
+              className="hover:text-secondary hover:cursor-pointer focus:outline-none text-sm"
+            >
+              Informasi
+            </button>
+            {dropdown === "informasi" && (
+              <div className="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-lg z-50">
+                <NavLink
+                  to="/katalog"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary hover:rounded-t-md text-sm"
+                  onClick={() => setDropdown("")}
+                >
+                  Katalog
+                </NavLink>
+                <NavLink
+                  to="/pricing"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary hover:rounded-b-md text-sm"
+                  onClick={() => setDropdown("")}
+                >
+                  Daftar Harga
+                </NavLink>
+                <NavLink
+                  to="/article"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary hover:rounded-b-md text-sm"
+                  onClick={() => setDropdown("")}
+                >
+                  Artikel
+                </NavLink>
+              </div>
+            )}
+          </div>
+
           <NavLink to="/career" className={menuClass}>Karir</NavLink>
           <NavLink to="/faq" className={menuClass}>FAQ</NavLink>
           <NavLink to="/contact-us" className={menuClass}>Hubungi Kami</NavLink>
-
-          {/* Dropdown */}
-          
         </div>
 
         <div id="nav-auth" className="hidden md:flex items-center gap-4 text-sm">

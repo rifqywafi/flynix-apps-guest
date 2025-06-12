@@ -1,9 +1,37 @@
+import { useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
-import reviews from "../assets/data/reviews/reviews.json";
 import Header from "../components/Header";
 import { ContainerCol } from "../components/Container";
+import { supabaseService } from "../services/supabaseService";
+import LoadingSpinner from "../components/LoadingSpinner";
+import AlertBox from "../components/AlertBox";
 
 export default function UserReview() {
+  const [reviews, setReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    async function fetchReviews() {
+      setLoading(true);
+      setError("");
+      try {
+        const data = await supabaseService({
+          table: "reviews",
+          method: "get",
+        });
+        setReviews(data);
+      } catch (err) {
+        setError(
+          err.message || "Gagal mengambil data review. Silakan coba lagi."
+        );
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchReviews();
+  }, []);
+
   return (
     <ContainerCol>
       <Header title="Review dari Pengguna" />
@@ -14,19 +42,23 @@ export default function UserReview() {
           name="albert"
           company="Apple"
         />
-        <div className="grid lg:grid-cols-2 justify-center gap-10">
-          {reviews.map((r) => (
-            <ReviewsCard
-              key={r.id}
-              star={r.star}
-              name={r.name}
-              date={r.date}
-              img={r.image}
-              company={r.company}
-              review={r.review}
-            />
-          ))}
-        </div>
+        {loading && <LoadingSpinner />}
+        {error && <AlertBox type="error">{error}</AlertBox>}
+        {!loading && !error && (
+          <div className="grid lg:grid-cols-2 justify-center gap-10">
+            {reviews.map((r) => (
+              <ReviewsCard
+                key={r.id}
+                star={r.star}
+                name={r.name}
+                date={r.date}
+                img={r.image}
+                company={r.company}
+                review={r.content}
+              />
+            ))}
+          </div>
+        )}
         <GiveReview />
       </div>
     </ContainerCol>

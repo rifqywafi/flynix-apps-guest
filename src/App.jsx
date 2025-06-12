@@ -24,10 +24,12 @@ const UserReview = React.lazy(() => import("./pages/UserReview"));
 const Career = React.lazy(() => import("./pages/Career"));
 const Booking = React.lazy(() => import("./pages/Booking"));
 const Articles = React.lazy(() => import("./pages/Articles"));
+const Pricing = React.lazy(() => import("./pages/Pricing"));
 const BookingDetail = React.lazy(() => import("./pages/BookingDetail"))
 const CareerDetail = React.lazy(() => import("./pages/CareerDetail"))
 const OurTeamDetail = React.lazy(() => import("./pages/OurTeamDetail"))
 const AboutUs = React.lazy(() => import("./pages/AboutUs"));
+const Katalog = React.lazy(() => import("./pages/Katalog"));
 const ErrorPage = React.lazy(() => import("./pages/ErrorPage"));
 const MainLayout = React.lazy(() => import("./layouts/MainLayout"));
 const ErrorLayout = React.lazy(() => import("./layouts/ErrorLayout"));
@@ -50,6 +52,8 @@ function App() {
             <Route path="/article" element={<Articles />} />
             <Route path="/article/:id" element={<ArticleDetail />} />
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/katalog" element={<Katalog />} />
           </Route>
           <Route element={<ErrorLayout />}>
             <Route path="*" element={<ErrorPage code={404}/>}/>
