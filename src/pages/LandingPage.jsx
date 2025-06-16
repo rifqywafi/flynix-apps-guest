@@ -32,6 +32,7 @@ export default function LandingPage() {
       <HeroSection />
       <QuoteSection data={data} />
       <ServiceSection />
+      <DestinationSection />
       <TestimonySection />
     </div>
   );
@@ -40,7 +41,7 @@ export default function LandingPage() {
 function QuoteSection({ data }) {
   return (
     <div className="flex flex-col text-center gap-5 mb-50 xl:mx-35 justify-center items-center">
-      <div className="md:text-2xl xl:text-4xl italic ">"{data.content}"</div>
+      <div className="md:text-2xl xl:text-4xl italic ">"{data.quote}"</div>
       <div className="self-end">
         <div className="md:text-xl xl:text-2xl">— {data.author}</div>
       </div>
@@ -61,40 +62,45 @@ function PlaneIconBg({ marginT, marginE }) {
 
 function HeroSection() {
   return (
-    <div
-      id="hero-section"
-      className="mt-5 xl:mt-none xl:justify-start justify-center flex flex-row items-center mx-35 min-h-screen relative max-w-screen-xl"
-    >
-      {/* Hero Content di Kiri */}
-      <div id="hero-content" className="xl:w-1/2 z-10 text-center md:text-left">
+    <div className="flex flex-col justify-center items-center">
+      <div
+        id="hero-section"
+        className="mt-5 xl:mt-none xl:justify-start justify-center flex flex-row items-center mx-35 min-h-screen relative max-w-screen-xl"
+      >
+        {/* Hero Content di Kiri */}
         <div
-          id="hero-tagline"
-          className="font-opensans font-bold text-secondary"
+          id="hero-content"
+          className="xl:w-1/2 z-10 text-center md:text-left"
         >
-          PILIHAN TERBAIK UNTUK LIBURANMU
+          <div
+            id="hero-tagline"
+            className="font-opensans font-bold text-secondary"
+          >
+            PILIHAN TERBAIK UNTUK LIBURANMU
+          </div>
+          <div
+            id="hero-header"
+            className="mt-4 leading-tight text-5xl font-volkhov text-primary xl:text-7xl font-bold"
+          >
+            Terbang Lebih Tinggi, Tanpa Ragu!
+          </div>
+          <div id="hero-desc" className="mt-4 text-lg text-gray-700">
+            Lupakan ribetnya pesan tiket. Dengan FlyNix, kamu bisa temukan
+            penerbangan terbaik, booking dalam hitungan detik, dan siap terbang
+            ke destinasi impianmu — mudah, cepat, dan nyaman.
+          </div>
+          <div id="hero-cta" className="mt-4">
+            <button className="bg-sides text-white py-2 px-6 rounded-md hover:cursor-pointer hover:shadow-lg hover:-translate-y-1 transition">
+              Lebih Lanjut
+            </button>
+          </div>
         </div>
-        <div
-          id="hero-header"
-          className="mt-4 leading-tight text-5xl font-volkhov text-primary xl:text-7xl font-bold"
-        >
-          Terbang Lebih Tinggi, Tanpa Ragu!
-        </div>
-        <div id="hero-desc" className="mt-4 text-lg text-gray-700">
-          Lupakan ribetnya pesan tiket. Dengan FlyNix, kamu bisa temukan
-          penerbangan terbaik, booking dalam hitungan detik, dan siap terbang ke
-          destinasi impianmu — mudah, cepat, dan nyaman.
-        </div>
-        <div id="hero-cta" className="mt-4">
-          <button className="bg-sides text-white py-2 px-6 rounded-md hover:cursor-pointer hover:shadow-lg hover:-translate-y-1 transition">
-            Lebih Lanjut
-          </button>
-        </div>
+        <img
+          className="absolute xl:block hidden left-50 z-[-5] h-auto"
+          src="/images/airplane1.png"
+          alt="Pesawat"
+        />
       </div>
-      <img
-        className="absolute xl:block hidden left-50 z-[-5] h-auto"
-        src="/images/airplane1.png"
-        alt="Pesawat"
-      />
     </div>
   );
 }
@@ -150,6 +156,83 @@ function ServiceSection() {
           className="absolute bottom-[-35px] left-[-35px] z-[-10]"
           alt=""
         />
+      </div>
+    </div>
+  );
+}
+function DestinationSection() {
+  return (
+    <div id="destination-section" className="my-50 flex flex-col gap-10">
+      <div className="">
+      <div id="service-tag" className="text-gray-500 text-xl text-center mb-3">
+        Penjualan Terbanyak
+      </div>
+      <div
+        id="services-title"
+        className="text-primary text-center font-bold font-volkhov text-3xl xl:text-5xl"
+      >
+        DESTINASI TERBAIK
+      </div>
+      </div>
+      <div className="flex justify-center items-center">
+      <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-20">
+        <div className="card bg-base-100 w-96 shadow-sm">
+          <figure>
+            <img
+              src="images/bali.jpg"
+              alt="Shoes"
+                  className="h-75"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title text-gray-500">Bandung, Indonesia</h2>
+            <p>
+              
+            </p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div className="card bg-base-100 w-96 shadow-sm">
+          <figure>
+            <img
+              src="images/jakarta.jpg"
+              alt="Shoes"
+                  className="h-75"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Card Title</h2>
+            <p>
+              A card component has a figure, a body part, and inside body there
+              are title and actions parts
+            </p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div className="card bg-base-100 w-96 shadow-sm">
+          <figure>
+            <img
+              src="images/bandung.jpg"
+              alt="Shoes"
+              className="h-75"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Card Title</h2>
+            <p>
+              A card component has a figure, a body part, and inside body there
+              are title and actions parts
+            </p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   );
