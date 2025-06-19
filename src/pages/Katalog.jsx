@@ -13,12 +13,15 @@ function FotoGrid({ fotoList }) {
         <div className="mb-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {fotoList.map((item) => (
-                    <div key={item.id} className="relative rounded-2xl shadow-lg bg-white">
-                        <img
-                            src={item.link}
-                            alt="Promo Maskapai"
-                            className="w-full h-56 object-cover rounded-2xl"
-                        />
+                    <>
+                    <div key={item.id} className="relative rounded-2xl shadow-lg bg-white overflow-hidden">
+                        {/* Container berukuran tetap */}
+                            <img
+                                src={item.link}
+                                key={item.id}
+                                alt="Promo Maskapai"
+                                className="w-full h-56 object-cover rounded-2xl transition-all duration-500 delay-200 ease-in-out"
+                            />
                         <div className="absolute top-2 left-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500 text-white">
                             Foto
                         </div>
@@ -26,16 +29,18 @@ function FotoGrid({ fotoList }) {
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="absolute bottom-2 left-2 text-indigo-600 underline text-xs font-medium bg-white/80 px-2 py-1 rounded"
+                            className="absolute bottom-2 left-2 text-primary underline text-xs font-medium bg-white/80 px-2 py-1 rounded"
                         >
                             Lihat Sumber
                         </a>
                     </div>
+                    </>
                 ))}
             </div>
         </div>
     );
 }
+
 
 // Komponen daftar video
 function VideoList({ videoList }) {
@@ -54,16 +59,6 @@ function VideoList({ videoList }) {
                         key={item.id}
                         className="min-w-[340px] max-w-[400px] flex-shrink-0 rounded-2xl p-3 shadow-lg bg-white"
                     >
-                        <div className="flex items-center justify-between mb-2">
-                            <a
-                                href={item.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-indigo-600 underline text-xs font-medium"
-                            >
-                                Lihat Sumber
-                            </a>
-                        </div>
                         {item.link.includes("youtube.com") || item.link.includes("youtu.be") ? (
                             <iframe
                                 src={
@@ -84,7 +79,6 @@ function VideoList({ videoList }) {
                                 className="w-full rounded-lg mb-2"
                             />
                         )}
-                        <div className="text-gray-700 text-xs break-all">{item.link}</div>
                     </div>
                 ))}
             </div>

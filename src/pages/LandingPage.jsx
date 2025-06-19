@@ -160,6 +160,24 @@ function ServiceSection() {
     </div>
   );
 }
+
+function DestinationCard({ img, title, desc }) {
+  return (
+    <div className="card bg-base-100 w-96 shadow-sm">
+      <figure>
+        <img src={img} alt="Destination" className="h-75" />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">{title}</h2>
+        <p>{desc}</p>
+        <div className="card-actions justify-end">
+          <button className="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function DestinationSection() {
   return (
     <div id="destination-section" className="my-50 flex flex-col gap-10">
@@ -176,62 +194,9 @@ function DestinationSection() {
       </div>
       <div className="flex justify-center items-center">
       <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-20">
-        <div className="card bg-base-100 w-96 shadow-sm">
-          <figure>
-            <img
-              src="images/bali.jpg"
-              alt="Shoes"
-                  className="h-75"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title text-gray-500">Bandung, Indonesia</h2>
-            <p>
-              
-            </p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
-        </div>
-        <div className="card bg-base-100 w-96 shadow-sm">
-          <figure>
-            <img
-              src="images/jakarta.jpg"
-              alt="Shoes"
-                  className="h-75"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Card Title</h2>
-            <p>
-              A card component has a figure, a body part, and inside body there
-              are title and actions parts
-            </p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
-        </div>
-        <div className="card bg-base-100 w-96 shadow-sm">
-          <figure>
-            <img
-              src="images/bandung.jpg"
-              alt="Shoes"
-              className="h-75"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Card Title</h2>
-            <p>
-              A card component has a figure, a body part, and inside body there
-              are title and actions parts
-            </p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
-        </div>
+        <DestinationCard title="Bandung" img="images/bandung.jpg" desc="Kota Bandung adalah sebuah kota sekaligus menjadi ibu kota provinsi di Provinsi Jawa Barat, Indonesia. Kota Bandung juga merupakan kota terbesar ketiga di Indonesia, setelah Jakarta dan Kota Surabaya. Kota ini menjadi kota terpadat kedua di Indonesia setelah Jakarta dengan kepadatan mencapai 15.051 jiwa/km2." />
+        <DestinationCard title="Jakarta" img="images/jakarta.jpg" desc="Jakarta—resmi disebut Daerah Khusus Ibukota Jakarta (DKI Jakarta) dan sebelumnya dikenal sebagai Batavia—adalah ibu kota negara Indonesia sekaligus daerah otonom setingkat provinsi. Wilayah ini dibagi menjadi lima kota administratif dan satu kabupaten administratif. Jakarta tergolong sebagai kota metropolitan dan sering dijuluki “The Big Durian” karena statusnya yang setara dengan “The Big Apple” di Amerika Serikat." />
+        <DestinationCard title="Bali" img="images/bali.jpg" desc="Provinsi ini terletak di bagian barat Kepulauan Nusa Tenggara, dengan ibu kota di Kota Denpasar. Pulau Bali—pulau terbesar di provinsi ini—dikenal dengan julukan Pulau Dewata dan Pulau Seribu Pura. Penduduk Bali pada tahun 2020 berjumlah sekitar 4.317.404 jiwa, dengan kepadatan 747 jiwa/km². Pada akhir tahun 2024, jumlah penduduk meningkat menjadi 4.375.263 jiwa" />
       </div>
       </div>
     </div>

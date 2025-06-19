@@ -1,362 +1,362 @@
 [
-    {
-      "id": 1,
-      "name": "Aldo Pratama",
-      "position": "Software Engineer",
-      "email": "aldo@example.com",
-      "phone": "+6281234567890",
-      "image": "/src/assets/data/team/images/man1.png",
-      "socials": {
-        "linkedin": "linkedin.com/in/aldo",
-        "twitter": "@aldo_dev",
-        "instagram": "@aldo.tech"
-      },
-      "address": {
-        "city": "Jakarta",
-        "country": "Indonesia"
-      },
-      "skills": ["JavaScript", "React", "Node.js"]
+  {
+    "id": 1,
+    "name": "Aldo Pratama",
+    "position": "Software Engineer",
+    "email": "aldo@example.com",
+    "phone": "+6281234567890",
+    "image": "/image/team/man1.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/aldo",
+      "twitter": "@aldo_dev",
+      "instagram": "@aldo.tech"
     },
-    {
-      "id": 2,
-      "name": "Nadia Ayu",
-      "position": "Product Manager",
-      "email": "nadia@example.com",
-      "phone": "+6281123456789",
-      "image": "/src/assets/data/team/images/woman2.png",
-      "socials": {
-        "linkedin": "linkedin.com/in/nadiaayu",
-        "twitter": "@nad_pm",
-        "instagram": "@nadia.ayu"
-      },
-      "address": {
-        "city": "Bandung",
-        "country": "Indonesia"
-      },
-      "skills": ["Agile", "Scrum", "UI/UX"]
+    "address": {
+      "city": "Jakarta",
+      "country": "Indonesia"
     },
-    {
-      "id": 3,
-      "name": "Bima Rahmat",
-      "position": "UI/UX Designer",
-      "email": "bima@example.com",
-      "phone": "+6281334567890",
-      "image": "/src/assets/data/team/images/man3.png",
-      "socials": {
-        "linkedin": "linkedin.com/in/bimarahmat",
-        "twitter": "@bimux",
-        "instagram": "@bimart"
-      },
-      "address": {
-        "city": "Surabaya",
-        "country": "Indonesia"
-      },
-      "skills": ["Figma", "Adobe XD", "Design System"]
+    "skills": ["JavaScript", "React", "Node.js"]
+  },
+  {
+    "id": 2,
+    "name": "Nadia Ayu",
+    "position": "Product Manager",
+    "email": "nadia@example.com",
+    "phone": "+6281123456789",
+    "image": "/image/team/woman2.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/nadiaayu",
+      "twitter": "@nad_pm",
+      "instagram": "@nadia.ayu"
     },
-    {
-      "id": 4,
-      "name": "Sari Wulandari",
-      "position": "Marketing Lead",
-      "email": "sari@example.com",
-      "phone": "+6281444567890",
-      "image": "/src/assets/data/team/images/woman3.png",
-      "socials": {
-        "linkedin": "linkedin.com/in/sariw",
-        "twitter": "@sari_marketing",
-        "instagram": "@sari.wulan"
-      },
-      "address": {
-        "city": "Yogyakarta",
-        "country": "Indonesia"
-      },
-      "skills": ["Digital Marketing", "SEO", "Analytics"]
+    "address": {
+      "city": "Bandung",
+      "country": "Indonesia"
     },
-    {
-      "id": 5,
-      "name": "Dimas Prasetyo",
-      "position": "DevOps Engineer",
-      "email": "dimas@example.com",
-      "phone": "+6281554567890",
-      "image": "/src/assets/data/team/images/man2.png",
-      "socials": {
-        "linkedin": "linkedin.com/in/dimasp",
-        "twitter": "@dimas_devops",
-        "instagram": "@dimas.io"
-      },
-      "address": {
-        "city": "Semarang",
-        "country": "Indonesia"
-      },
-      "skills": ["AWS", "Docker", "CI/CD"]
+    "skills": ["Agile", "Scrum", "UI/UX"]
+  },
+  {
+    "id": 3,
+    "name": "Bima Rahmat",
+    "position": "UI/UX Designer",
+    "email": "bima@example.com",
+    "phone": "+6281334567890",
+    "image": "/image/team/man3.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/bimarahmat",
+      "twitter": "@bimux",
+      "instagram": "@bimart"
     },
-    {
-      "id": 6,
-      "name": "Tania Safira",
-      "position": "HR Specialist",
-      "email": "tania@example.com",
-      "phone": "+6281664567890",
-      "image": "/src/assets/data/team/images/woman3.png",
-      "socials": {
-        "linkedin": "linkedin.com/in/tanias",
-        "twitter": "@tania_hr",
-        "instagram": "@tania.safira"
-      },
-      "address": {
-        "city": "Bogor",
-        "country": "Indonesia"
-      },
-      "skills": ["Recruitment", "People Ops", "Payroll"]
+    "address": {
+      "city": "Surabaya",
+      "country": "Indonesia"
     },
-    {
-      "id": 7,
-      "name": "Arif Kurniawan",
-      "position": "Data Analyst",
-      "email": "arif@example.com",
-      "phone": "+6281774567890",
-      "image": "/src/assets/data/team/images/man1.png",
-      "socials": {
-        "linkedin": "linkedin.com/in/arifk",
-        "twitter": "@arifdata",
-        "instagram": "@arif.k"
-      },
-      "address": {
-        "city": "Malang",
-        "country": "Indonesia"
-      },
-      "skills": ["SQL", "Python", "Tableau"]
+    "skills": ["Figma", "Adobe XD", "Design System"]
+  },
+  {
+    "id": 4,
+    "name": "Sari Wulandari",
+    "position": "Marketing Lead",
+    "email": "sari@example.com",
+    "phone": "+6281444567890",
+    "image": "/image/team/woman3.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/sariw",
+      "twitter": "@sari_marketing",
+      "instagram": "@sari.wulan"
     },
-    {
-      "id": 8,
-      "name": "Laras Intan",
-      "position": "Graphic Designer",
-      "email": "laras@example.com",
-      "phone": "+6281884567890",
-      "image": "/src/assets/data/team/images/woman1.png",
-      "socials": {
-        "linkedin": "linkedin.com/in/larasi",
-        "twitter": "@larasgfx",
-        "instagram": "@laras.design"
-      },
-      "address": {
-        "city": "Medan",
-        "country": "Indonesia"
-      },
-      "skills": ["Illustrator", "Photoshop", "Canva"]
+    "address": {
+      "city": "Yogyakarta",
+      "country": "Indonesia"
     },
-    {
-      "id": 9,
-      "name": "Gilang Mahesa",
-      "position": "QA Engineer",
-      "email": "gilang@example.com",
-      "phone": "+6281994567890",
-      "image": "/src/assets/data/team/images/man3.png",
-      "socials": {
-        "linkedin": "linkedin.com/in/gilangm",
-        "twitter": "@gilangqa",
-        "instagram": "@gilang.test"
-      },
-      "address": {
-        "city": "Makassar",
-        "country": "Indonesia"
-      },
-      "skills": ["Selenium", "Postman", "Cypress"]
+    "skills": ["Digital Marketing", "SEO", "Analytics"]
+  },
+  {
+    "id": 5,
+    "name": "Dimas Prasetyo",
+    "position": "DevOps Engineer",
+    "email": "dimas@example.com",
+    "phone": "+6281554567890",
+    "image": "/image/team/man2.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/dimasp",
+      "twitter": "@dimas_devops",
+      "instagram": "@dimas.io"
     },
-    {
-      "id": 10,
-      "name": "Vina Amalia",
-      "position": "Content Writer",
-      "email": "vina@example.com",
-      "phone": "+6281224567890",
-      "image": "/src/assets/data/team/images/woman1.png",
-      "socials": {
-        "linkedin": "linkedin.com/in/vinaa",
-        "twitter": "@vina_content",
-        "instagram": "@vina.am"
-      },
-      "address": {
-        "city": "Padang",
-        "country": "Indonesia"
-      },
-      "skills": ["Copywriting", "SEO", "Blogging"]
+    "address": {
+      "city": "Semarang",
+      "country": "Indonesia"
     },
-    {
-        "id": 11,
-        "name": "Riko Setiawan",
-        "position": "Mobile Developer",
-        "email": "riko@example.com",
-        "phone": "+6281234567811",
-        "image": "/src/assets/data/team/images/man1.png",
-        "socials": {
-          "linkedin": "linkedin.com/in/rikos",
-          "twitter": "@rikomobile",
-          "instagram": "@riko.dev"
-        },
-        "address": {
-          "city": "Kinabalu",
-          "country": "Malaysia"
-        },
-        "skills": ["Flutter", "Dart", "Firebase"]
-      },
-      {
-        "id": 12,
-        "name": "Fitri Handayani",
-        "position": "Finance Analyst",
-        "email": "fitri@example.com",
-        "phone": "+6281123456712",
-        "image": "/src/assets/data/team/images/woman2.png",
-        "socials": {
-          "linkedin": "linkedin.com/in/fitrih",
-          "twitter": "@fitrifi",
-          "instagram": "@fitri.ana"
-        },
-        "address": {
-          "city": "Johor Baharu",
-          "country": "Malaysia"
-        },
-        "skills": ["Budgeting", "Excel", "Forecasting"]
-      },
-      {
-        "id": 13,
-        "name": "Reza Fadillah",
-        "position": "Backend Developer",
-        "email": "reza@example.com",
-        "phone": "+6281334567813",
-        "image": "/src/assets/data/team/images/man3.png",
-        "socials": {
-          "linkedin": "linkedin.com/in/rezafd",
-          "twitter": "@rezaback",
-          "instagram": "@reza.tech"
-        },
-        "address": {
-          "city": "Chengdu",
-          "country": "China"
-        },
-        "skills": ["Node.js", "MongoDB", "API Design"]
-      },
-      {
-        "id": 14,
-        "name": "Dewi Anindya",
-        "position": "Front-End Developer",
-        "email": "dewi@example.com",
-        "phone": "+6281444567814",
-        "image": "/src/assets/data/team/images/woman2.png",
-        "socials": {
-          "linkedin": "linkedin.com/in/dewia",
-          "twitter": "@dewife",
-          "instagram": "@dewi.codes"
-        },
-        "address": {
-          "city": "Guangzhou",
-          "country": "China"
-        },
-        "skills": ["HTML", "CSS", "React"]
-      },
-      {
-        "id": 15,
-        "name": "Fahmi Zulkarnain",
-        "position": "Cloud Engineer",
-        "email": "fahmi@example.com",
-        "phone": "+6281554567815",
-        "image": "/src/assets/data/team/images/man2.png",
-        "socials": {
-          "linkedin": "linkedin.com/in/fahmiz",
-          "twitter": "@fahmicloud",
-          "instagram": "@fahmi.aws"
-        },
-        "address": {
-          "city": "Shanghai",
-          "country": "China"
-        },
-        "skills": ["AWS", "Terraform", "Kubernetes"]
-      },
-      {
-        "id": 16,
-        "name": "Mega Lestari",
-        "position": "Business Analyst",
-        "email": "mega@example.com",
-        "phone": "+6281664567816",
-        "image": "/src/assets/data/team/images/woman1.png",
-        "socials": {
-          "linkedin": "linkedin.com/in/megal",
-          "twitter": "@mega_ba",
-          "instagram": "@mega.biz"
-        },
-        "address": {
-          "city": "Tokyo",
-          "country": "Japan"
-        },
-        "skills": ["BPMN", "Requirement Gathering", "Stakeholder Management"]
-      },
-      {
-        "id": 17,
-        "name": "Yoga Prasetya",
-        "position": "Cybersecurity Specialist",
-        "email": "yoga@example.com",
-        "phone": "+6281774567817",
-        "image": "/src/assets/data/team/images/man1.png",
-        "socials": {
-          "linkedin": "linkedin.com/in/yogap",
-          "twitter": "@yogacyber",
-          "instagram": "@yoga.sec"
-        },
-        "address": {
-          "city": "Kyoto",
-          "country": "Japan"
-        },
-        "skills": ["Penetration Testing", "Network Security", "SIEM"]
-      },
-      {
-        "id": 18,
-        "name": "Indah Kartika",
-        "position": "Customer Support",
-        "email": "indah@example.com",
-        "phone": "+6281884567818",
-        "image": "/src/assets/data/team/images/woman3.png",
-        "socials": {
-          "linkedin": "linkedin.com/in/indahk",
-          "twitter": "@indahcs",
-          "instagram": "@indah.help"
-        },
-        "address": {
-          "city": "Incheon",
-          "country": "South Korea"
-        },
-        "skills": ["CRM", "Live Chat", "Zendesk"]
-      },
-      {
-        "id": 19,
-        "name": "Randy Saputra",
-        "position": "System Administrator",
-        "email": "randy@example.com",
-        "phone": "+6281994567819",
-        "image": "/src/assets/data/team/images/man3.png",
-        "socials": {
-          "linkedin": "linkedin.com/in/randys",
-          "twitter": "@randyadmin",
-          "instagram": "@randy.sys"
-        },
-        "address": {
-          "city": "Busan",
-          "country": "South Korea"
-        },
-        "skills": ["Linux", "Networking", "Shell Scripting"]
-      },
-      {
-        "id": 20,
-        "name": "Citra Rahmawati",
-        "position": "Legal Advisor",
-        "email": "citra@example.com",
-        "phone": "+6281224567820",
-        "image": "/src/assets/data/team/images/woman1.png",
-        "socials": {
-          "linkedin": "linkedin.com/in/citrar",
-          "twitter": "@citralaw",
-          "instagram": "@citra.legal"
-        },
-        "address": {
-          "city": "Oslo",
-          "country": "Norway"
-        },
-        "skills": ["Corporate Law", "Contract Review", "Compliance"]
-      }
-  ]
+    "skills": ["AWS", "Docker", "CI/CD"]
+  },
+  {
+    "id": 6,
+    "name": "Tania Safira",
+    "position": "HR Specialist",
+    "email": "tania@example.com",
+    "phone": "+6281664567890",
+    "image": "/image/team/woman3.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/tanias",
+      "twitter": "@tania_hr",
+      "instagram": "@tania.safira"
+    },
+    "address": {
+      "city": "Bogor",
+      "country": "Indonesia"
+    },
+    "skills": ["Recruitment", "People Ops", "Payroll"]
+  },
+  {
+    "id": 7,
+    "name": "Arif Kurniawan",
+    "position": "Data Analyst",
+    "email": "arif@example.com",
+    "phone": "+6281774567890",
+    "image": "/image/team/man1.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/arifk",
+      "twitter": "@arifdata",
+      "instagram": "@arif.k"
+    },
+    "address": {
+      "city": "Malang",
+      "country": "Indonesia"
+    },
+    "skills": ["SQL", "Python", "Tableau"]
+  },
+  {
+    "id": 8,
+    "name": "Laras Intan",
+    "position": "Graphic Designer",
+    "email": "laras@example.com",
+    "phone": "+6281884567890",
+    "image": "/image/team/woman1.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/larasi",
+      "twitter": "@larasgfx",
+      "instagram": "@laras.design"
+    },
+    "address": {
+      "city": "Medan",
+      "country": "Indonesia"
+    },
+    "skills": ["Illustrator", "Photoshop", "Canva"]
+  },
+  {
+    "id": 9,
+    "name": "Gilang Mahesa",
+    "position": "QA Engineer",
+    "email": "gilang@example.com",
+    "phone": "+6281994567890",
+    "image": "/image/team/man3.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/gilangm",
+      "twitter": "@gilangqa",
+      "instagram": "@gilang.test"
+    },
+    "address": {
+      "city": "Makassar",
+      "country": "Indonesia"
+    },
+    "skills": ["Selenium", "Postman", "Cypress"]
+  },
+  {
+    "id": 10,
+    "name": "Vina Amalia",
+    "position": "Content Writer",
+    "email": "vina@example.com",
+    "phone": "+6281224567890",
+    "image": "/image/team/woman1.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/vinaa",
+      "twitter": "@vina_content",
+      "instagram": "@vina.am"
+    },
+    "address": {
+      "city": "Padang",
+      "country": "Indonesia"
+    },
+    "skills": ["Copywriting", "SEO", "Blogging"]
+  },
+  {
+    "id": 11,
+    "name": "Riko Setiawan",
+    "position": "Mobile Developer",
+    "email": "riko@example.com",
+    "phone": "+6281234567811",
+    "image": "/image/team/man1.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/rikos",
+      "twitter": "@rikomobile",
+      "instagram": "@riko.dev"
+    },
+    "address": {
+      "city": "Kinabalu",
+      "country": "Malaysia"
+    },
+    "skills": ["Flutter", "Dart", "Firebase"]
+  },
+  {
+    "id": 12,
+    "name": "Fitri Handayani",
+    "position": "Finance Analyst",
+    "email": "fitri@example.com",
+    "phone": "+6281123456712",
+    "image": "/image/team/woman2.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/fitrih",
+      "twitter": "@fitrifi",
+      "instagram": "@fitri.ana"
+    },
+    "address": {
+      "city": "Johor Baharu",
+      "country": "Malaysia"
+    },
+    "skills": ["Budgeting", "Excel", "Forecasting"]
+  },
+  {
+    "id": 13,
+    "name": "Reza Fadillah",
+    "position": "Backend Developer",
+    "email": "reza@example.com",
+    "phone": "+6281334567813",
+    "image": "/image/team/man3.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/rezafd",
+      "twitter": "@rezaback",
+      "instagram": "@reza.tech"
+    },
+    "address": {
+      "city": "Chengdu",
+      "country": "China"
+    },
+    "skills": ["Node.js", "MongoDB", "API Design"]
+  },
+  {
+    "id": 14,
+    "name": "Dewi Anindya",
+    "position": "Front-End Developer",
+    "email": "dewi@example.com",
+    "phone": "+6281444567814",
+    "image": "/image/team/woman2.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/dewia",
+      "twitter": "@dewife",
+      "instagram": "@dewi.codes"
+    },
+    "address": {
+      "city": "Guangzhou",
+      "country": "China"
+    },
+    "skills": ["HTML", "CSS", "React"]
+  },
+  {
+    "id": 15,
+    "name": "Fahmi Zulkarnain",
+    "position": "Cloud Engineer",
+    "email": "fahmi@example.com",
+    "phone": "+6281554567815",
+    "image": "/image/team/man2.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/fahmiz",
+      "twitter": "@fahmicloud",
+      "instagram": "@fahmi.aws"
+    },
+    "address": {
+      "city": "Shanghai",
+      "country": "China"
+    },
+    "skills": ["AWS", "Terraform", "Kubernetes"]
+  },
+  {
+    "id": 16,
+    "name": "Mega Lestari",
+    "position": "Business Analyst",
+    "email": "mega@example.com",
+    "phone": "+6281664567816",
+    "image": "/image/team/woman1.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/megal",
+      "twitter": "@mega_ba",
+      "instagram": "@mega.biz"
+    },
+    "address": {
+      "city": "Tokyo",
+      "country": "Japan"
+    },
+    "skills": ["BPMN", "Requirement Gathering", "Stakeholder Management"]
+  },
+  {
+    "id": 17,
+    "name": "Yoga Prasetya",
+    "position": "Cybersecurity Specialist",
+    "email": "yoga@example.com",
+    "phone": "+6281774567817",
+    "image": "/image/team/man1.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/yogap",
+      "twitter": "@yogacyber",
+      "instagram": "@yoga.sec"
+    },
+    "address": {
+      "city": "Kyoto",
+      "country": "Japan"
+    },
+    "skills": ["Penetration Testing", "Network Security", "SIEM"]
+  },
+  {
+    "id": 18,
+    "name": "Indah Kartika",
+    "position": "Customer Support",
+    "email": "indah@example.com",
+    "phone": "+6281884567818",
+    "image": "/image/team/woman3.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/indahk",
+      "twitter": "@indahcs",
+      "instagram": "@indah.help"
+    },
+    "address": {
+      "city": "Incheon",
+      "country": "South Korea"
+    },
+    "skills": ["CRM", "Live Chat", "Zendesk"]
+  },
+  {
+    "id": 19,
+    "name": "Randy Saputra",
+    "position": "System Administrator",
+    "email": "randy@example.com",
+    "phone": "+6281994567819",
+    "image": "/image/team/man3.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/randys",
+      "twitter": "@randyadmin",
+      "instagram": "@randy.sys"
+    },
+    "address": {
+      "city": "Busan",
+      "country": "South Korea"
+    },
+    "skills": ["Linux", "Networking", "Shell Scripting"]
+  },
+  {
+    "id": 20,
+    "name": "Citra Rahmawati",
+    "position": "Legal Advisor",
+    "email": "citra@example.com",
+    "phone": "+6281224567820",
+    "image": "/image/team/woman1.png",
+    "socials": {
+      "linkedin": "linkedin.com/in/citrar",
+      "twitter": "@citralaw",
+      "instagram": "@citra.legal"
+    },
+    "address": {
+      "city": "Oslo",
+      "country": "Norway"
+    },
+    "skills": ["Corporate Law", "Contract Review", "Compliance"]
+  }
+]
