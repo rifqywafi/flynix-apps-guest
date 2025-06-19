@@ -2,15 +2,11 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
-  const [dropdown, setDropdown] = useState(""); // "" | "tentang" | "informasi"
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const menuClass = ({ isActive }) =>
     `cursor-pointer ${isActive ? "text-secondary" : "hover:text-secondary"}`;
-
-  const toggleDropdown = (type) => {
-    setDropdown(dropdown === type ? "" : type);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +16,14 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close mobile menu on route change (optional, for better UX)
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const closeMenu = () => setMobileOpen(false);
+    window.addEventListener("resize", closeMenu);
+    return () => window.removeEventListener("resize", closeMenu);
+  }, [mobileOpen]);
 
   return (
     <div
@@ -35,78 +39,64 @@ export default function Navbar() {
           </NavLink>
         </div>
 
+        {/* Desktop Menu */}
         <div id="nav-menu" className="hidden md:flex gap-8 text-sm text-gray-700 items-center relative">
           <NavLink to="/booking" className={menuClass}>Pesan Tiket</NavLink>
           <NavLink to="/user-review" className={menuClass}>Reviews</NavLink>
-          
-          {/* Dropdown Tentang */}
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown("tentang")}
-              className="hover:text-secondary hover:cursor-pointer focus:outline-none text-sm"
-            >
-              Tentang
-            </button>
-            {dropdown === "tentang" && (
-              <div className="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-lg z-50">
-                <NavLink
-                  to="/about-us"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary hover:rounded-t-md text-sm"
-                  onClick={() => setDropdown("")}
-                >
-                  Tentang Kami
-                </NavLink>
-                <NavLink
-                  to="/our-team"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary hover:rounded-b-md text-sm"
-                  onClick={() => setDropdown("")}
-                >
-                  Tim Kami
-                </NavLink>
-              </div>
-            )}
+
+          {/* Dropdown Perusahaan */}
+          <div className="dropdown dropdown-hover">
+            <label tabIndex={0} className="hover:text-secondary hover:cursor-pointer text-sm">
+              Perusahaan
+            </label>
+            <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-white rounded-box w-40 z-50">
+              <li>
+                <NavLink to="/about-us" className="text-gray-700 text-sm">Tentang Kami</NavLink>
+              </li>
+              <li>
+                <NavLink to="/our-team" className="text-gray-700 text-sm">Tim Kami</NavLink>
+              </li>
+              <li>
+                <NavLink to="/career" className="text-gray-700 text-sm">Karir</NavLink>
+              </li>
+            </ul>
+          </div>
+
+          {/* Dropdown Kontak & Bantuan */}
+          <div className="dropdown dropdown-hover">
+            <label tabIndex={0} className="hover:text-secondary hover:cursor-pointer text-sm">
+              Kontak & Bantuan
+            </label>
+            <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-white rounded-box w-40 z-50">
+              <li>
+                <NavLink to="/faq" className="text-gray-700 text-sm">Bantuan/FAQ</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact-us" className="text-gray-700 text-sm">Hubungi Kami</NavLink>
+              </li>
+            </ul>
           </div>
 
           {/* Dropdown Informasi */}
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown("informasi")}
-              className="hover:text-secondary hover:cursor-pointer focus:outline-none text-sm"
-            >
+          <div className="dropdown dropdown-hover">
+            <label tabIndex={0} className="hover:text-secondary hover:cursor-pointer text-sm">
               Informasi
-            </button>
-            {dropdown === "informasi" && (
-              <div className="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-lg z-50">
-                <NavLink
-                  to="/katalog"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary hover:rounded-t-md text-sm"
-                  onClick={() => setDropdown("")}
-                >
-                  Katalog
-                </NavLink>
-                <NavLink
-                  to="/pricing"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary hover:rounded-b-md text-sm"
-                  onClick={() => setDropdown("")}
-                >
-                  Daftar Harga
-                </NavLink>
-                <NavLink
-                  to="/article"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary hover:rounded-b-md text-sm"
-                  onClick={() => setDropdown("")}
-                >
-                  Artikel
-                </NavLink>
-              </div>
-            )}
+            </label>
+            <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-white rounded-box w-40 z-50">
+              <li>
+                <NavLink to="/katalog" className="text-gray-700 text-sm">Katalog</NavLink>
+              </li>
+              <li>
+                <NavLink to="/pricing" className="text-gray-700 text-sm">Daftar Harga</NavLink>
+              </li>
+              <li>
+                <NavLink to="/article" className="text-gray-700 text-sm">Artikel</NavLink>
+              </li>
+            </ul>
           </div>
-
-          <NavLink to="/career" className={menuClass}>Karir</NavLink>
-          <NavLink to="/faq" className={menuClass}>FAQ</NavLink>
-          <NavLink to="/contact-us" className={menuClass}>Hubungi Kami</NavLink>
         </div>
 
+        {/* Desktop Auth */}
         <div id="nav-auth" className="hidden md:flex items-center gap-4 text-sm">
           <button className="cursor-pointer hover:text-secondary">Masuk</button>
           <button className="border-2 border-gray-500 text-black px-4 py-1 rounded-md hover:bg-gray-500 hover:text-white transition">
@@ -114,8 +104,98 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="md:hidden">{/* Tambahkan mobile menu jika dibutuhkan */}</div>
+        {/* Mobile Hamburger */}
+        <div className="md:hidden flex items-center">
+          <button
+            className="text-2xl text-primary focus:outline-none"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M4 7h20M4 14h20M4 21h20" />
+            </svg>
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {mobileOpen && (
+        <div className="md:hidden bg-white shadow-lg absolute w-full left-0 top-full z-50">
+          <div className="flex flex-col gap-2 px-6 py-4 text-gray-700 text-base">
+            <NavLink to="/booking" className={menuClass} onClick={() => setMobileOpen(false)}>
+              Pesan Tiket
+            </NavLink>
+            <NavLink to="/user-review" className={menuClass} onClick={() => setMobileOpen(false)}>
+              Reviews
+            </NavLink>
+            {/* Dropdown Perusahaan */}
+            <details className="dropdown w-full">
+              <summary className="py-2 px-1 hover:text-secondary cursor-pointer font-semibold">Perusahaan</summary>
+              <ul className="menu bg-white rounded-box p-2 w-full">
+                <li>
+                  <NavLink to="/about-us" className="text-gray-700" onClick={() => setMobileOpen(false)}>
+                    Tentang Kami
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/our-team" className="text-gray-700" onClick={() => setMobileOpen(false)}>
+                    Tim Kami
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/career" className="text-gray-700" onClick={() => setMobileOpen(false)}>
+                    Karir
+                  </NavLink>
+                </li>
+              </ul>
+            </details>
+            {/* Dropdown Kontak & Bantuan */}
+            <details className="dropdown w-full">
+              <summary className="py-2 px-1 hover:text-secondary cursor-pointer font-semibold">Kontak & Bantuan</summary>
+              <ul className="menu bg-white rounded-box p-2 w-full">
+                <li>
+                  <NavLink to="/faq" className="text-gray-700" onClick={() => setMobileOpen(false)}>
+                    Bantuan/FAQ
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contact-us" className="text-gray-700" onClick={() => setMobileOpen(false)}>
+                    Hubungi Kami
+                  </NavLink>
+                </li>
+              </ul>
+            </details>
+            {/* Dropdown Informasi */}
+            <details className="dropdown w-full">
+              <summary className="py-2 px-1 hover:text-secondary cursor-pointer font-semibold">Informasi</summary>
+              <ul className="menu bg-white rounded-box p-2 w-full">
+                <li>
+                  <NavLink to="/katalog" className="text-gray-700" onClick={() => setMobileOpen(false)}>
+                    Katalog
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/pricing" className="text-gray-700" onClick={() => setMobileOpen(false)}>
+                    Daftar Harga
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/article" className="text-gray-700" onClick={() => setMobileOpen(false)}>
+                    Artikel
+                  </NavLink>
+                </li>
+              </ul>
+            </details>
+            {/* Auth Buttons */}
+            <div className="flex flex-col gap-2 mt-2">
+              <button className="cursor-pointer hover:text-secondary text-left">Masuk</button>
+              <button className="border-2 border-gray-500 text-black px-4 py-1 rounded-md hover:bg-gray-500 hover:text-white transition text-left">
+                Daftar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

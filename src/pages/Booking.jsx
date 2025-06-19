@@ -6,15 +6,19 @@ import { ContainerCol } from "../components/Container";
 import Header from "../components/Header";
 import flightData from "../assets/data/products/tickets.json";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
+// ...existing code...
 
 export default function Booking() {
-  const [flightTypeFilter, setFlightTypeFilter] = useState("");
-  const [originFilter, setOriginFilter] = useState("");
-  const [destinationFilter, setDestinationFilter] = useState("");
+  const location = useLocation();
+  const state = location.state || {};
+
+  const [flightTypeFilter, setFlightTypeFilter] = useState(state.flightType || "");
+  const [originFilter, setOriginFilter] = useState(state.origin || "");
+  const [destinationFilter, setDestinationFilter] = useState(state.destination || "");
   const [departureDateFilter, setDepartureDateFilter] = useState("");
   const [provinces, setProvinces] = useState([]);
-  const [showAllFlights, setShowAllFlights] = useState(false);
-  const [showAllButton, setShowAllButton] = useState("Tampilkan");
 
   useEffect(() => {
     if (flightTypeFilter === "Domestik") {
@@ -22,30 +26,12 @@ export default function Booking() {
     }
   }, [flightTypeFilter]);
 
-  const showAllButtonOnChange = () => {
-    setFlightTypeFilter("");
-    setOriginFilter("");
-    setDestinationFilter("");
-    setDepartureDateFilter("");
-    // if(!anyFilterActive){
-    if (showAllButton == "Tampilkan") {
-      setShowAllFlights(true);
-      setShowAllButton("Sembunyikan");
-    } else {
-      setShowAllFlights(false);
-      setShowAllButton("Tampilkan");
-    }
-    // }
-  };
-
   const isVisible = flightData.filter((flight) => {
     const matchOrigin = originFilter
       ? flight.origin.toLowerCase().includes(originFilter.toLowerCase())
       : true;
     const matchDestination = destinationFilter
-      ? flight.destination
-          .toLowerCase()
-          .includes(destinationFilter.toLowerCase())
+      ? flight.destination.toLowerCase().includes(destinationFilter.toLowerCase())
       : true;
     const matchDepartureDate = departureDateFilter
       ? flight.departureDate === departureDateFilter
@@ -59,11 +45,6 @@ export default function Booking() {
     );
   });
 
-  const anyFilterActive =
-    flightTypeFilter ||
-    originFilter ||
-    destinationFilter ||
-    departureDateFilter;
 
   return (
     <ContainerCol>
@@ -76,7 +57,6 @@ export default function Booking() {
               setFlightTypeFilter(e.target.value);
               setOriginFilter("");
               setDestinationFilter("");
-              setShowAllFlights(false);
             }}
             className="p-2 border-2 rounded-lg w-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-0 hover:cursor-pointer"
           >
@@ -86,18 +66,6 @@ export default function Booking() {
             <option value="Domestik">Domestik</option>
             <option value="Internasional">Internasional</option>
           </select>
-          {/* {!anyFilterActive ? ( */}
-          <div className="mt-4 text-right">
-            <button
-              onClick={() => showAllButtonOnChange()}
-              className="text-sm text-blue-600 hover:underline hover:cursor-pointer"
-            >
-              {!anyFilterActive
-                ? showAllButton + " Semua Tiket"
-                : "Hapus Semua Filter"}
-            </button>
-          </div>
-          {/* ) : null} */}
         </div>
         <div className="flex w-[75vw] flex-col md:flex-row gap-4 mb-6">
           {flightTypeFilter && (
@@ -106,10 +74,7 @@ export default function Booking() {
                 <>
                   <select
                     value={originFilter}
-                    onChange={(e) => {
-                      setOriginFilter(e.target.value);
-                      setShowAllFlights(false);
-                    }}
+                    onChange={(e) => setOriginFilter(e.target.value)}
                     className="p-2 border w-full rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-0 hover:cursor-pointer"
                   >
                     <option value="">Pilih Provinsi Asal</option>
@@ -121,10 +86,7 @@ export default function Booking() {
                   </select>
                   <select
                     value={destinationFilter}
-                    onChange={(e) => {
-                      setOriginFilter(e.target.value);
-                      setShowAllFlights(false);
-                    }}
+                    onChange={(e) => setDestinationFilter(e.target.value)}
                     className="p-2 border w-full rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-0"
                   >
                     <option value="">Pilih Provinsi Tujuan</option>
@@ -141,20 +103,14 @@ export default function Booking() {
                     type="text"
                     placeholder="Asal (misal: Singapore)"
                     value={originFilter}
-                    onChange={(e) => {
-                      setOriginFilter(e.target.value);
-                      setShowAllFlights(false);
-                    }}
+                    onChange={(e) => setOriginFilter(e.target.value)}
                     className="p-2 w-full border rounded-lg bg-white placeholder-primary text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-0 hover:cursor-pointer"
                   />
                   <input
                     type="text"
                     placeholder="Tujuan (misal: Tokyo)"
                     value={destinationFilter}
-                    onChange={(e) => {
-                      setOriginFilter(e.target.value);
-                      setShowAllFlights(false);
-                    }}
+                    onChange={(e) => setDestinationFilter(e.target.value)}
                     className="p-2 border rounded-lg bg-white placeholder-primary text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-0 hover:cursor-pointer"
                   />
                 </>
@@ -162,17 +118,14 @@ export default function Booking() {
               <input
                 type="date"
                 value={departureDateFilter}
-                onChange={(e) => {
-                  setOriginFilter(e.target.value);
-                  setShowAllFlights(false);
-                }}
+                onChange={(e) => setDepartureDateFilter(e.target.value)}
                 className="p-2 border rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-0 hover:cursor-pointer"
               />
             </>
           )}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-x-5 gap-y-10">
-          {(anyFilterActive || showAllFlights) && isVisible.length > 0 ? (
+          {isVisible.length > 0 ? (
             <>
               {isVisible.map((flight, index) => (
                 <div
@@ -216,18 +169,18 @@ export default function Booking() {
                     </div>
                     <div className="flex items-center justify-center">
                       <Link to={`/booking/${flight.id}`}>
-                      <BsChevronCompactRight className="text-6xl text-primary hover:text-gray-300 hover:cursor-pointer" />
+                        <BsChevronCompactRight className="text-6xl text-primary hover:text-gray-300 hover:cursor-pointer" />
                       </Link>
                     </div>
                   </div>
                 </div>
               ))}
             </>
-          ) : anyFilterActive ? (
+          ) : (
             <p className="text-center text-gray-500">
               Tidak ada hasil yang sesuai dengan filter yang dipilih.
             </p>
-          ) : null}
+          )}
         </div>
       </div>
     </ContainerCol>

@@ -8,14 +8,13 @@ import { GiBusDoors } from "react-icons/gi";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { BiCalendarAlt } from "react-icons/bi";
 import { BsFillAirplaneFill } from "react-icons/bs";
-import { BiChevronLeft } from "react-icons/bi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { MdFlightLand, MdFlightTakeoff } from "react-icons/md";
 import flightData from "../assets/data/products/tickets.json";
 import { useParams } from "react-router-dom";
 import { ContainerCol } from "../components/Container";
 import Header from "../components/Header";
-import { Link } from "react-router-dom";
+import BackButton from "../components/BackButton";
 
 export default function BookingDetail() {
   const { id } = useParams();
@@ -26,12 +25,7 @@ export default function BookingDetail() {
       <ContainerCol>
         <Header title="Pesan Tiket" />
         <div className="flex flex-row items-center w-auto">
-          <Link
-            to="/booking"
-            className="hover:text-gray-600 hover:cursor-pointer"
-          >
-            <BiChevronLeft className="text-3xl text-gray-400 me-2" />
-          </Link>
+        <BackButton to="/booking"/>
         </div>
         {flightDataDetail ? (
           <>

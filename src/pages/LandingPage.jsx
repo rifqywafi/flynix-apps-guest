@@ -5,13 +5,12 @@ import { useState } from "react";
 import testimonies from "../assets/data/testimonies/testimonies.json";
 import { useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
-  // const data = {
-  //   i: "",
-  //   q: "TESS",
-  //   a: "Rifqy"
-  // }
+
+
+
   const [data, setData] = useState("");
   useEffect(() => {
     axios.get(`https://api.quotable.io/random`).then((response) => {
@@ -162,7 +161,19 @@ function ServiceSection() {
 }
 
 function DestinationCard({ img, title, desc }) {
-  return (
+  const navigate = useNavigate();
+  // const userLocation = "DKI Jakarta";
+
+  const handleCekTiket = () => {
+    navigate("/booking", {
+      state: {
+        origin: "",
+        destination: title,
+        flightType: "Domestik"
+      }
+    });
+  };
+return (
     <div className="card bg-base-100 w-96 shadow-sm">
       <figure>
         <img src={img} alt="Destination" className="h-75" />
@@ -171,7 +182,9 @@ function DestinationCard({ img, title, desc }) {
         <h2 className="card-title">{title}</h2>
         <p>{desc}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <button className="btn btn-primary" onClick={handleCekTiket}>
+            Cek Tiket
+          </button>
         </div>
       </div>
     </div>

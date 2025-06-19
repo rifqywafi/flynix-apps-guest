@@ -1,3 +1,4 @@
+import { BiChevronRight } from "react-icons/bi"; 
 import { useEffect, useState } from "react";
 import { ContainerCol } from "../components/Container";
 import Header from "../components/Header";
@@ -37,26 +38,25 @@ export default function Faq() {
       {loading && <LoadingSpinner />}
       {error && <AlertBox type="error">{error}</AlertBox>}
       {!loading && !error && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mb-20">
+        <div className="w-full max-w-screen mb-20">
           {faq.map((f, i) => (
-            <CardFaq key={i} question={f.question} answer={f.answer} />
+            <div
+              key={i}
+              className="collapse bg-base-100 border border-base-300 mb-2"
+            >
+              <input
+                type="radio"
+                name="faq-accordion"
+                defaultChecked={i === 0}
+              />
+              <div className="collapse-title font-semibold">{f.question}</div>
+              <div className="collapse-content flex items-center">
+                <BiChevronRight className="text-2xl me-2"/>{f.answer}
+              </div>
+            </div>
           ))}
         </div>
       )}
     </ContainerCol>
-  );
-}
-
-function CardFaq({ question, answer }) {
-  return (
-    <div id="card-faq" className="max-w-full flex flex-col">
-      <div className="bg-primary font-volkhov text-white p-4 text-xl rounded-lg w-fit">
-        {question}
-      </div>
-      <div className="bg-white p-3 items-center py-8 shadow-lg gap-5 flex flex-row rounded-lg ml-25">
-        <div className="text-secondary text-4xl">{">"}</div>
-        {answer}
-      </div>
-    </div>
   );
 }

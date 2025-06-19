@@ -5,7 +5,7 @@
     "position": "Software Engineer",
     "email": "aldo@example.com",
     "phone": "+6281234567890",
-    "image": "/image/team/man1.png",
+    "image": "/images/team/man1.png",
     "socials": {
       "linkedin": "linkedin.com/in/aldo",
       "twitter": "@aldo_dev",
@@ -23,7 +23,7 @@
     "position": "Product Manager",
     "email": "nadia@example.com",
     "phone": "+6281123456789",
-    "image": "/image/team/woman2.png",
+    "image": "/images/team/woman2.png",
     "socials": {
       "linkedin": "linkedin.com/in/nadiaayu",
       "twitter": "@nad_pm",
@@ -41,7 +41,7 @@
     "position": "UI/UX Designer",
     "email": "bima@example.com",
     "phone": "+6281334567890",
-    "image": "/image/team/man3.png",
+    "image": "/images/team/man3.png",
     "socials": {
       "linkedin": "linkedin.com/in/bimarahmat",
       "twitter": "@bimux",
@@ -59,7 +59,7 @@
     "position": "Marketing Lead",
     "email": "sari@example.com",
     "phone": "+6281444567890",
-    "image": "/image/team/woman3.png",
+    "image": "/images/team/woman3.png",
     "socials": {
       "linkedin": "linkedin.com/in/sariw",
       "twitter": "@sari_marketing",
@@ -77,7 +77,7 @@
     "position": "DevOps Engineer",
     "email": "dimas@example.com",
     "phone": "+6281554567890",
-    "image": "/image/team/man2.png",
+    "image": "/images/team/man2.png",
     "socials": {
       "linkedin": "linkedin.com/in/dimasp",
       "twitter": "@dimas_devops",
@@ -95,7 +95,7 @@
     "position": "HR Specialist",
     "email": "tania@example.com",
     "phone": "+6281664567890",
-    "image": "/image/team/woman3.png",
+    "image": "/images/team/woman3.png",
     "socials": {
       "linkedin": "linkedin.com/in/tanias",
       "twitter": "@tania_hr",
@@ -113,7 +113,7 @@
     "position": "Data Analyst",
     "email": "arif@example.com",
     "phone": "+6281774567890",
-    "image": "/image/team/man1.png",
+    "image": "/images/team/man1.png",
     "socials": {
       "linkedin": "linkedin.com/in/arifk",
       "twitter": "@arifdata",
@@ -131,7 +131,7 @@
     "position": "Graphic Designer",
     "email": "laras@example.com",
     "phone": "+6281884567890",
-    "image": "/image/team/woman1.png",
+    "image": "/images/team/woman1.png",
     "socials": {
       "linkedin": "linkedin.com/in/larasi",
       "twitter": "@larasgfx",
@@ -149,7 +149,7 @@
     "position": "QA Engineer",
     "email": "gilang@example.com",
     "phone": "+6281994567890",
-    "image": "/image/team/man3.png",
+    "image": "/images/team/man3.png",
     "socials": {
       "linkedin": "linkedin.com/in/gilangm",
       "twitter": "@gilangqa",
@@ -167,7 +167,7 @@
     "position": "Content Writer",
     "email": "vina@example.com",
     "phone": "+6281224567890",
-    "image": "/image/team/woman1.png",
+    "image": "/images/team/woman1.png",
     "socials": {
       "linkedin": "linkedin.com/in/vinaa",
       "twitter": "@vina_content",
@@ -185,7 +185,7 @@
     "position": "Mobile Developer",
     "email": "riko@example.com",
     "phone": "+6281234567811",
-    "image": "/image/team/man1.png",
+    "image": "/images/team/man1.png",
     "socials": {
       "linkedin": "linkedin.com/in/rikos",
       "twitter": "@rikomobile",
@@ -203,7 +203,7 @@
     "position": "Finance Analyst",
     "email": "fitri@example.com",
     "phone": "+6281123456712",
-    "image": "/image/team/woman2.png",
+    "image": "/images/team/woman2.png",
     "socials": {
       "linkedin": "linkedin.com/in/fitrih",
       "twitter": "@fitrifi",
@@ -221,7 +221,7 @@
     "position": "Backend Developer",
     "email": "reza@example.com",
     "phone": "+6281334567813",
-    "image": "/image/team/man3.png",
+    "image": "/images/team/man3.png",
     "socials": {
       "linkedin": "linkedin.com/in/rezafd",
       "twitter": "@rezaback",
@@ -239,7 +239,7 @@
     "position": "Front-End Developer",
     "email": "dewi@example.com",
     "phone": "+6281444567814",
-    "image": "/image/team/woman2.png",
+    "image": "/images/team/woman2.png",
     "socials": {
       "linkedin": "linkedin.com/in/dewia",
       "twitter": "@dewife",
@@ -257,7 +257,7 @@
     "position": "Cloud Engineer",
     "email": "fahmi@example.com",
     "phone": "+6281554567815",
-    "image": "/image/team/man2.png",
+    "image": "/images/team/man2.png",
     "socials": {
       "linkedin": "linkedin.com/in/fahmiz",
       "twitter": "@fahmicloud",
@@ -275,7 +275,7 @@
     "position": "Business Analyst",
     "email": "mega@example.com",
     "phone": "+6281664567816",
-    "image": "/image/team/woman1.png",
+    "image": "/images/team/woman1.png",
     "socials": {
       "linkedin": "linkedin.com/in/megal",
       "twitter": "@mega_ba",
@@ -293,7 +293,7 @@
     "position": "Cybersecurity Specialist",
     "email": "yoga@example.com",
     "phone": "+6281774567817",
-    "image": "/image/team/man1.png",
+    "image": "/images/team/man1.png",
     "socials": {
       "linkedin": "linkedin.com/in/yogap",
       "twitter": "@yogacyber",
@@ -311,7 +311,7 @@
     "position": "Customer Support",
     "email": "indah@example.com",
     "phone": "+6281884567818",
-    "image": "/image/team/woman3.png",
+    "image": "/images/team/woman3.png",
     "socials": {
       "linkedin": "linkedin.com/in/indahk",
       "twitter": "@indahcs",
@@ -329,7 +329,7 @@
     "position": "System Administrator",
     "email": "randy@example.com",
     "phone": "+6281994567819",
-    "image": "/image/team/man3.png",
+    "image": "/images/team/man3.png",
     "socials": {
       "linkedin": "linkedin.com/in/randys",
       "twitter": "@randyadmin",
@@ -347,7 +347,7 @@
     "position": "Legal Advisor",
     "email": "citra@example.com",
     "phone": "+6281224567820",
-    "image": "/image/team/woman1.png",
+    "image": "/images/team/woman1.png",
     "socials": {
       "linkedin": "linkedin.com/in/citrar",
       "twitter": "@citralaw",

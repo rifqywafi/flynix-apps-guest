@@ -1,4 +1,3 @@
-import { BiChevronLeft } from "react-icons/bi"; 
 import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { AiFillPhone } from "react-icons/ai";
 import { BsFillEnvelopeFill } from "react-icons/bs";
@@ -7,7 +6,7 @@ import Header from "../components/Header";
 import { useParams } from "react-router-dom";
 import teamData from "./../assets/data/team/our-team.json";
 import { ContainerCol } from "../components/Container";
-import { Link } from "react-router-dom";
+import BackButton from "../components/BackButton";
 
 export default function OurTeamDetail() {
   const { id } = useParams();
@@ -17,13 +16,7 @@ export default function OurTeamDetail() {
     <ContainerCol>
       <div className="min-h-screen">
         <Header title="Tim Kami" />
-        <Link
-          to="/our-team"
-          className="mt-4  text-gray-500 px-4 py-2 flex items-center flex-row rounded"
-        >
-          <BiChevronLeft className="text-3xl"/>
-          Kembali
-        </Link>
+        <BackButton to="/our-team" />
         <div className="flex justify-center items-center">
           <div className="flex flex-col justify-center items-center md:flex-row gap-6 bg-white shadow-xl rounded-xl p-6">
             <img

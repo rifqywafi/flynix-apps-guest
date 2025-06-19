@@ -2,13 +2,14 @@ import { ContainerCol } from "../components/Container";
 import articles from "./../assets/data/articles/articles.json";
 import Header from "../components/Header";
 import { Link, useParams } from "react-router-dom";
-
+import BackButton from "../components/BackButton";
 export default function ArticleDetail() {
   const { id } = useParams();
   const articleDet = articles.find((a) => a.id === parseInt(id));
   return articleDet ? (
     <ContainerCol>
       <div className="min-h-screen">
+        <BackButton to="/article"/>
         <img
           src={`${articleDet.imageUrl}?auto=format&fit=crop&w=800&q=80`}
           alt={articleDet.title}
