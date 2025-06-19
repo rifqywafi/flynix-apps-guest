@@ -44,8 +44,8 @@ body {
     themes: light --default, dark --prefersdark;
 }
 
- @plugin "daisyui/theme" {
-   name: "light";
-   --color-primary: #181E4B;
-   --color-secondary : #DF6951;
- }
+@plugin "daisyui/theme" {
+  name: "light";
+  --color-primary: #181E4B;
+  --color-secondary : #DF6951;
+}
