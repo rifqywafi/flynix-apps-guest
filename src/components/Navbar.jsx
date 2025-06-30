@@ -150,7 +150,7 @@ export default function Navbar() {
         >
           <a
             className="cursor-pointer hover:text-secondary text-left"
-            href="https://flynixhenry.vercel.app/"
+            href="https://fly-nix-administrator.vercel.app/login"
             target="_blank" // opsional, agar buka di tab baru
             rel="noopener noreferrer" // opsional, untuk keamanan jika target _blank
           >
