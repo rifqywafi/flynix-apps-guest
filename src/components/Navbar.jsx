@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <div
       id="navbar"
-      className={`w-full py-5 top-0 z-20 sticky transition-colors duration-300 ${
+      className={`w-full py-3 top-0 z-20 sticky transition-colors duration-300 ${
         scrolled ? "bg-white shadow" : "bg-transparent"
       }`}
     >
@@ -36,9 +36,12 @@ export default function Navbar() {
         <div id="nav-logo">
           <NavLink
             to="/"
-            className="text-2xl font-plaster font-bold text-primary"
+            className="text-2xl font-montserrat font-bold text-primary"
           >
-            FlyNix
+            <div className="flex flex-row items-center gap-2">
+              <img src="/images/flynix-logo.png" className="h-10 w-auto" alt="flynix" />
+              FLYNIX
+            </div>
           </NavLink>
         </div>
 

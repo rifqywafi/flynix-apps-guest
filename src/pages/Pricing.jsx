@@ -5,7 +5,7 @@ import AlertBox from "../components/AlertBox";
 import LoadingSpinner from "../components/LoadingSpinner";
 import {ContainerCol} from "../components/Container";
 import Header from "../components/Header";
-
+import { NavLink } from "react-router-dom";
 
 function ServiceList({ services }) {
     if (!services) return null;
@@ -63,7 +63,8 @@ export default function Pricing() {
             {!loading && !error && pricing.length > 0 && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {pricing.map((item) => (
-                        <div
+                        <NavLink
+                        to={`/pricing/${item.id}`}
                             key={item.id}
                             className="border rounded-2xl p-6 shadow-lg bg-white hover:shadow-2xl transition-shadow duration-200"
                         >
@@ -81,7 +82,7 @@ export default function Pricing() {
                                 <ServiceList services={item.services} />
                             </div>
                             <div className="text-red-400 text-xs">*Dapat berubah sewaktu-waktu</div>
-                        </div>
+                        </NavLink>
                     ))}
                 </div>
             )}

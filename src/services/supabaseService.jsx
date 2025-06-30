@@ -21,3 +21,8 @@ export async function supabaseService({ table, method = 'get', data = null }) {
         throw error.response ? error.response.data : error;
     }
 }
+
+export async function getById(table, id) {
+    const data = await supabaseService({ table, params: `?id=eq.${id}` });
+    return data[0];
+}

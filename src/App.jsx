@@ -25,6 +25,7 @@ const Career = React.lazy(() => import("./pages/Career"));
 const Booking = React.lazy(() => import("./pages/Booking"));
 const Articles = React.lazy(() => import("./pages/Articles"));
 const Pricing = React.lazy(() => import("./pages/Pricing"));
+const PricingSimulate = React.lazy(() => import("./pages/PricingSimulate"));
 const BookingDetail = React.lazy(() => import("./pages/BookingDetail"))
 const CareerDetail = React.lazy(() => import("./pages/CareerDetail"))
 const OurTeamDetail = React.lazy(() => import("./pages/OurTeamDetail"))
@@ -33,6 +34,7 @@ const Katalog = React.lazy(() => import("./pages/Katalog"));
 const ErrorPage = React.lazy(() => import("./pages/ErrorPage"));
 const MainLayout = React.lazy(() => import("./layouts/MainLayout"));
 const ErrorLayout = React.lazy(() => import("./layouts/ErrorLayout"));
+
 function App() {
   return (
       <Suspense fallback={<Loading/>}>
@@ -53,6 +55,7 @@ function App() {
             <Route path="/article/:id" element={<ArticleDetail />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/pricing/:id" element={<PricingSimulate />} />
             <Route path="/katalog" element={<Katalog />} />
           </Route>
           <Route element={<ErrorLayout />}>
