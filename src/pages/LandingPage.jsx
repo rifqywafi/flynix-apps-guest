@@ -8,14 +8,17 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
-
-
-
   const [data, setData] = useState("");
   useEffect(() => {
-    axios.get(`https://api.quotable.io/random`).then((response) => {
-      setData(response.data);
-    });
+    axios
+      .get("https://api.api-ninjas.com/v1/quotes/", {
+        headers: {
+          "X-Api-Key": "/nO4FS5WKqQE8/OcVPzWgQ==MTogD21OTQ4Pd0fw",
+        },
+      })
+      .then((response) => {
+        setData(response.data);
+      });
   }, []);
 
   return (
@@ -38,11 +41,18 @@ export default function LandingPage() {
 }
 
 function QuoteSection({ data }) {
+if (!data || !Array.isArray(data) || data.length === 0) {
+    return (
+      <div className="flex flex-col text-center gap-5 mb-50 xl:mx-35 justify-center items-center">
+        <div className="md:text-2xl xl:text-4xl italic text-gray-400">Memuat kutipan...</div>
+      </div>
+    );
+  }
   return (
     <div className="flex flex-col text-center gap-5 mb-50 xl:mx-35 justify-center items-center">
-      <div className="md:text-2xl xl:text-4xl italic ">"{data.quote}"</div>
+      <div className="md:text-2xl xl:text-4xl italic">"{data[0].quote}"</div>
       <div className="self-end">
-        <div className="md:text-xl xl:text-2xl">— {data.author}</div>
+        <div className="md:text-xl xl:text-2xl">— {data[0].author}</div>
       </div>
     </div>
   );
@@ -169,11 +179,11 @@ function DestinationCard({ img, title, desc }) {
       state: {
         origin: "",
         destination: title,
-        flightType: "Domestik"
-      }
+        flightType: "Domestik",
+      },
     });
   };
-return (
+  return (
     <div className="card bg-base-100 w-96 shadow-sm">
       <figure>
         <img src={img} alt="Destination" className="h-75" />
@@ -195,22 +205,37 @@ function DestinationSection() {
   return (
     <div id="destination-section" className="my-50 flex flex-col gap-10">
       <div className="">
-      <div id="service-tag" className="text-gray-500 text-xl text-center mb-3">
-        Penjualan Terbanyak
-      </div>
-      <div
-        id="services-title"
-        className="text-primary text-center font-bold font-volkhov text-3xl xl:text-5xl"
-      >
-        DESTINASI TERBAIK
-      </div>
+        <div
+          id="service-tag"
+          className="text-gray-500 text-xl text-center mb-3"
+        >
+          Penjualan Terbanyak
+        </div>
+        <div
+          id="services-title"
+          className="text-primary text-center font-bold font-volkhov text-3xl xl:text-5xl"
+        >
+          DESTINASI TERBAIK
+        </div>
       </div>
       <div className="flex justify-center items-center">
-      <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-20">
-        <DestinationCard title="Bandung" img="images/bandung.jpg" desc="Kota Bandung adalah sebuah kota sekaligus menjadi ibu kota provinsi di Provinsi Jawa Barat, Indonesia. Kota Bandung juga merupakan kota terbesar ketiga di Indonesia, setelah Jakarta dan Kota Surabaya. Kota ini menjadi kota terpadat kedua di Indonesia setelah Jakarta dengan kepadatan mencapai 15.051 jiwa/km2." />
-        <DestinationCard title="Jakarta" img="images/jakarta.jpg" desc="Jakarta—resmi disebut Daerah Khusus Ibukota Jakarta (DKI Jakarta) dan sebelumnya dikenal sebagai Batavia—adalah ibu kota negara Indonesia sekaligus daerah otonom setingkat provinsi. Wilayah ini dibagi menjadi lima kota administratif dan satu kabupaten administratif. Jakarta tergolong sebagai kota metropolitan dan sering dijuluki “The Big Durian” karena statusnya yang setara dengan “The Big Apple” di Amerika Serikat." />
-        <DestinationCard title="Bali" img="images/bali.jpg" desc="Provinsi ini terletak di bagian barat Kepulauan Nusa Tenggara, dengan ibu kota di Kota Denpasar. Pulau Bali—pulau terbesar di provinsi ini—dikenal dengan julukan Pulau Dewata dan Pulau Seribu Pura. Penduduk Bali pada tahun 2020 berjumlah sekitar 4.317.404 jiwa, dengan kepadatan 747 jiwa/km². Pada akhir tahun 2024, jumlah penduduk meningkat menjadi 4.375.263 jiwa" />
-      </div>
+        <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-20">
+          <DestinationCard
+            title="Bandung"
+            img="images/bandung.jpg"
+            desc="Kota Bandung adalah sebuah kota sekaligus menjadi ibu kota provinsi di Provinsi Jawa Barat, Indonesia. Kota Bandung juga merupakan kota terbesar ketiga di Indonesia, setelah Jakarta dan Kota Surabaya. Kota ini menjadi kota terpadat kedua di Indonesia setelah Jakarta dengan kepadatan mencapai 15.051 jiwa/km2."
+          />
+          <DestinationCard
+            title="Jakarta"
+            img="images/jakarta.jpg"
+            desc="Jakarta—resmi disebut Daerah Khusus Ibukota Jakarta (DKI Jakarta) dan sebelumnya dikenal sebagai Batavia—adalah ibu kota negara Indonesia sekaligus daerah otonom setingkat provinsi. Wilayah ini dibagi menjadi lima kota administratif dan satu kabupaten administratif. Jakarta tergolong sebagai kota metropolitan dan sering dijuluki “The Big Durian” karena statusnya yang setara dengan “The Big Apple” di Amerika Serikat."
+          />
+          <DestinationCard
+            title="Bali"
+            img="images/bali.jpg"
+            desc="Provinsi ini terletak di bagian barat Kepulauan Nusa Tenggara, dengan ibu kota di Kota Denpasar. Pulau Bali—pulau terbesar di provinsi ini—dikenal dengan julukan Pulau Dewata dan Pulau Seribu Pura. Penduduk Bali pada tahun 2020 berjumlah sekitar 4.317.404 jiwa, dengan kepadatan 747 jiwa/km². Pada akhir tahun 2024, jumlah penduduk meningkat menjadi 4.375.263 jiwa"
+          />
+        </div>
       </div>
     </div>
   );

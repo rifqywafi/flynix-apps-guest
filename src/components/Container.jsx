@@ -11,7 +11,7 @@ export function ContainerRow({children}){
 export function ContainerCol({ children }) {
   return (
     <div>
-      <div className="flex flex-col gap-5 p-2 mx-5 md:mx-35">
+      <div className="flex flex-col my-10 gap-5 p-2 mx-5 md:mx-35">
         {children}
       </div>
     </div>

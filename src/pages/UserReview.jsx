@@ -37,7 +37,7 @@ export default function UserReview() {
       <Header title="Review dari Pengguna" />
       <div id="user-review" className="flex flex-col gap-30 mb-20">
         <HeroReview
-          img="/images/review/man3.png"
+          img="/images/reviews/man3.png"
           review="Salah Satu Maskapai Penerbangan Terbaik di Dunia! Dengan lebih dari 100 penerbangan internasional per hari"
           name="albert"
           company="Apple"

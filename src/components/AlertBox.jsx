@@ -1,6 +1,6 @@
 export default function AlertBox({ type = "info", children }) {
     const baseClass =
-        "px-4 py-3 rounded-2xl mb-6 shadow-lg border text-sm"
+        "px-4 py-3 rounded-2xl my-3 shadow-lg border text-sm"
 
     const styles = {
         success: "bg-green-100 border-green-400 text-green-700",

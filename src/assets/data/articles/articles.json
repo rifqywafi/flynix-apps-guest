@@ -5,7 +5,8 @@
     "author": "Dewi Lestari",
     "date": "2025-05-15",
     "content": "React adalah library JavaScript yang digunakan untuk membangun antarmuka pengguna (UI). Dalam artikel ini, kita akan mempelajari dasar-dasar React seperti komponen, props, dan state.",
-    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+    "kategori": "Teknologi"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "author": "Andi Saputra",
     "date": "2025-05-20",
     "content": "State dan props adalah bagian penting dalam pengembangan aplikasi React. State digunakan untuk menyimpan data lokal komponen, sedangkan props digunakan untuk mengirim data antar komponen.",
-    "imageUrl": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f"
+    "imageUrl": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f",
+    "kategori": "Teknologi"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "author": "Sari Wulandari",
     "date": "2025-05-25",
     "content": "Komponen reusable memungkinkan kita menulis kode yang lebih bersih dan efisien. Pelajari bagaimana menyusun komponen agar bisa digunakan berulang kali di berbagai bagian aplikasi.",
-    "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+    "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    "kategori": "Teknologi"
   },
   {
     "id": 4,
@@ -29,6 +32,79 @@
     "author": "Rizky Anwar",
     "date": "2025-06-01",
     "content": "Hooks adalah fitur terbaru di React yang memungkinkan penggunaan state dan lifecycle tanpa class. Dua hook yang paling umum digunakan adalah useState dan useEffect.",
-    "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    "kategori": "Teknologi"
+  },
+  {
+    "id": 5,
+    "title": "Tips Aman Saat Terbang di Masa Pandemi",
+    "author": "Budi Santoso",
+    "date": "2025-06-05",
+    "content": "Pandemi mengubah banyak hal, termasuk cara kita bepergian. Berikut beberapa tips agar tetap aman saat melakukan perjalanan udara.",
+    "imageUrl": "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e",
+    "kategori": "Tips"
+  },
+  {
+    "id": 6,
+    "title": "Sejarah Penerbangan di Indonesia",
+    "author": "Lina Marlina",
+    "date": "2025-06-10",
+    "content": "Penerbangan di Indonesia telah berkembang pesat sejak pertama kali diperkenalkan. Artikel ini membahas sejarah dan perkembangan dunia aviasi di tanah air.",
+    "imageUrl": "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92",
+    "kategori": "Penerbangan"
+  },
+  {
+    "id": 7,
+    "title": "Cara Memilih Maskapai Penerbangan Terbaik",
+    "author": "Agus Pratama",
+    "date": "2025-06-15",
+    "content": "Memilih maskapai penerbangan yang tepat sangat penting untuk kenyamanan dan keamanan perjalanan Anda. Simak tips berikut sebelum memesan tiket.",
+    "imageUrl": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
+    "kategori": "Penerbangan"
+  },
+  {
+    "id": 8,
+    "title": "Teknologi Terbaru di Dunia Aviasi",
+    "author": "Dina Kurnia",
+    "date": "2025-06-20",
+    "content": "Industri penerbangan terus berinovasi dengan teknologi terbaru, mulai dari pesawat ramah lingkungan hingga sistem navigasi canggih.",
+    "imageUrl": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca",
+    "kategori": "Penerbangan"
+  },
+  {
+    "id": 9,
+    "title": "Manfaat Traveling untuk Kesehatan Mental",
+    "author": "Rina Sari",
+    "date": "2025-06-25",
+    "content": "Traveling tidak hanya menyenangkan, tetapi juga bermanfaat untuk kesehatan mental. Temukan alasan mengapa Anda perlu berlibur secara rutin.",
+    "imageUrl": "https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b",
+    "kategori": "Umum"
+  },
+  {
+    "id": 10,
+    "title": "Tips Packing Efisien untuk Liburan",
+    "author": "Yusuf Maulana",
+    "date": "2025-07-01",
+    "content": "Packing yang efisien membuat perjalanan lebih nyaman. Berikut tips dan trik agar barang bawaan Anda tetap ringkas namun lengkap.",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+    "kategori": "Tips"
+  },
+  {
+    "id": 11,
+    "title": "Mengatasi Jet Lag Setelah Penerbangan Jauh",
+    "author": "Putri Anggraini",
+    "date": "2025-07-05",
+    "content": "Jet lag sering dialami setelah penerbangan jarak jauh. Pelajari cara mengatasinya agar tetap fit selama liburan.",
+    "imageUrl": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f",
+    "kategori": "Tips"
+  },
+  {
+    "id": 12,
+    "title": "Kenali Aturan Bagasi Maskapai",
+    "author": "Dewi Lestari",
+    "date": "2025-07-10",
+    "content": "Setiap maskapai memiliki aturan bagasi yang berbeda. Pastikan Anda mengetahui detailnya agar perjalanan lancar tanpa kendala.",
+    "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    "kategori": "Umum"
   }
 ]
