@@ -150,7 +150,7 @@ export default function Navbar() {
         >
           <a
             className="cursor-pointer hover:text-secondary text-left"
-            href="https://fly-nix-administrator.vercel.app/login"
+            href="https://fly-nix-administrator.vercel.app/"
             target="_blank" // opsional, agar buka di tab baru
             rel="noopener noreferrer" // opsional, untuk keamanan jika target _blank
           >
@@ -299,7 +299,7 @@ export default function Navbar() {
             <div className="flex flex-col gap-2 mt-2">
               <a
                 className="cursor-pointer hover:text-secondary text-left"
-                href="https://flynixhenry.vercel.app/"
+                href="https://fly-nix-administrator.vercel.app/"
                 target="_blank" // opsional, agar buka di tab baru
                 rel="noopener noreferrer" // opsional, untuk keamanan jika target _blank
               >
